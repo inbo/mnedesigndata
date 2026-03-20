@@ -1,12 +1,9 @@
 template:
-  bootstrap: 5
-  bslib:
-    pkgdown-navbar-bg: "#772953"
   params:
     bootswatch: united
 
 navbar:
-  bg: custom
+    type: inverse
 
 url: https://inbo.github.io/mnedesigndata
 
