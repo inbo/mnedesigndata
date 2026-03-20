@@ -1,0 +1,25 @@
+{
+    "title": "R package mnedesigndata: design data of the Monitoring Programme for the Natural Environment (MNE)",
+    "description": "mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it. URL: <a href=\"https://inbo.github.io/mnedesigndata\">https://inbo.github.io/mnedesigndata</a>.",
+    "license": "GPL-3.0",
+    "upload_type": "software",
+    "access_right": "open",
+    "version": "0.1.0",
+    "creators": [
+        {
+            "name": "Vanderhaeghe, Floris",
+            "affiliation": "Research Institute for Nature and Forest (INBO)",
+            "orcid": "0000-0002-6378-6229"
+        }
+    ],
+    "keywords": [
+        "R",
+        "package",
+        "Natura 2000",
+        "habitat",
+        "environment",
+        "data",
+        "Flanders",
+        "Belgium"
+        ]
+}

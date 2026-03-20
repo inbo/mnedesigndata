@@ -1,0 +1,11 @@
+^LICENSE\.md$
+^\.Rproj\.user$
+^misc$
+^.*\.Rproj$
+^README\.Rmd$
+^CODE_OF_CONDUCT\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.zenodo\.json$
+^\.github$

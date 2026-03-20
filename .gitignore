@@ -1,0 +1,15 @@
+.Rproj.user
+.Rhistory
+*.html
+!header.html
+*.tex
+!header.tex
+.~lock*
+*.Rcheck/
+*.tar.gz
+.httr-oauth
+misc/**/*.md
+_book*
+!_bookdown.yml
+inst/doc
+docs

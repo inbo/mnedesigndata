@@ -1,0 +1,21 @@
+Package: mnedesigndata
+Title: Design data of the Monitoring Programme for the Natural Environment (MNE)
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Floris", "Vanderhaeghe", email = "floris.vanderhaeghe@inbo.be", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6378-6229")), 
+    person("Research Institute for Nature and Forest (INBO)", email = "info@inbo.be", role = c("cph")))
+Description: mnedesigndata is an R package to distribute and document R data 
+    objects that reflect the current implementation design of the Monitoring 
+    Programme for the Natural Environment (MNE). Aspects are covered such as the 
+    scheme's spatial sampling frames, the spatiotemporal samples and the 
+    designed revisit patterns of the most important field activities. The
+    objects originate particularly from the REP workflow (revisitplan) and 
+    scripts tied to it.
+License: GPL (>= 3)
+URL: https://inbo.github.io/mnedesigndata, https://github.com/inbo/mnedesigndata
+BugReports: https://github.com/inbo/mnedesigndata/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+  curl

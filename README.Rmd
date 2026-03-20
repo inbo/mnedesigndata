@@ -1,0 +1,66 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mnedesigndata
+
+<!-- badges: start -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxx)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/inbo/mnedesigndata/workflows/R-CMD-check/badge.svg)](https://github.com/inbo/mnedesigndata/actions?query=workflow%3AR-CMD-check)
+[![inbo r-universe-name](https://inbo.r-universe.dev/badges/:name?color=c04384)](https://inbo.r-universe.dev)
+[![inbo r-universe package status](https://inbo.r-universe.dev/badges/mnedesigndata)](https://inbo.r-universe.dev)
+<!-- badges: end -->
+
+The goal of `mnedesigndata` is to distribute and document R data 
+    objects that reflect the current implementation design of the Monitoring 
+    Programme for the Natural Environment (MNE). Aspects are covered such as the 
+    scheme's spatial sampling frames, the spatiotemporal samples and the 
+    designed revisit patterns of the most important field activities. The
+    objects originate particularly from the REP workflow (revisitplan) and 
+    scripts tied to it.
+
+## Installation
+
+To install the current package version from the `main` branch (latest stable release), run:
+
+```r
+install.packages("mnedesigndata", repos = c(inbo = "https://inbo.r-universe.dev", 
+                                            CRAN = "https://cloud.r-project.org"))
+```
+
+The above provides a pre-compiled package for Windows and macOS, which should be faster than below approach.
+INBO staff should have the INBO repository enabled already (check with `getOption("repos")`), in which case **`install.packages("mnedesigndata")`** is all you need!
+
+If you want to install from the source repository, run:
+
+```r
+remotes::install_github("inbo/mnedesigndata",
+                        build_vignettes = TRUE,
+                        upgrade = TRUE)
+```
+
+Note that this will install the package from the `main` branch.
+If you need a version from another branch, add the `ref` argument in the above function to provide the branch name.
+
+Repeat the installation when you wish to upgrade.
+
+## Related packages
+
+- [`n2khabmon`](https://inbo.github.io/n2khabmon)
+- [`n2khab`](https://inbo.github.io/n2khab)
+
+## Code of Conduct
+
+Please note that the `mnedesigndata` package is released with a [Contributor Code of Conduct](https://inbo.github.io/mnedesigndata/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
