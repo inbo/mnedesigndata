@@ -4,10 +4,10 @@ citEntry(
   entry    = "Manual",
   title    = "R package mnedesigndata: design data of the Monitoring Programme for the Natural Environment (MNE)",
   author   = "Floris Vanderhaeghe",
-  year     = "2024",
+  year     = "2026",
   url      = "https://inbo.github.io/mnedesigndata",
 
-  textVersion = paste("Vanderhaeghe F (2024).",
+  textVersion = paste("Vanderhaeghe F (2026).",
   "R package mnedesigndata: design data of the Monitoring Programme for the Natural Environment (MNE).",
   "https://inbo.github.io/mnedesigndata."
   )
