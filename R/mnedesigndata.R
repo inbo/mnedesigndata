@@ -1,6 +1,6 @@
 #' @details
 #' See the \href{00Index.html}{Index}
-#' for documentation on functions and datasets delivered with the package.
+#' for documentation of datasets delivered with the package.
 #'
 #' For contributing, see the README on
 #' \href{https://github.com/inbo/mnedesigndata/blob/master/README.md}{GitHub}.
