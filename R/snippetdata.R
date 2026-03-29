@@ -120,6 +120,11 @@
 #'   unit belongs to a floating (fen) type? Currently this is defined as type
 #'   `7140_mrd`.
 #'
+#' @field wait_mhq Logical. Should the scheduled field activity group in the
+#'   specified spatial sampling unit be put on hold because in the considered
+#'   date interval (year) the field activity group is only needed for a MHQ
+#'   scheme? (The latter is seen in the value of `scheme_ps_targetpanels`.)
+#'
 #' @source The code snippets file, which creates objects derived from REP
 #'   objects. See
 #'   <https://github.com/inbo/n2khab-mne-monitoring/blob/main/020_fieldwork_organization/code_snippets.R>.
