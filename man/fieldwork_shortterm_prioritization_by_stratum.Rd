@@ -29,16 +29,17 @@ edited (postponed) compared to \link{fag_stratum_grts_calendar}.
 \describe{
 \item{\code{scheme_ps_targetpanels}}{Factor. A concatenation of \code{"{scheme}:PS{panel set number}{targetpanel}"} strings, separated by \code{" | "} in case more than
 one targetpanel applies. It represents the different targetpanels (each
-belonging to a scheme and panel set) for which this field activity group
-was planned for the specified spatial sampling unit in the specified date
-interval.}
+belonging to a scheme and panel set) for which this field activity group in
+the specified spatial sampling unit needs to be done in the specified date
+interval as it cannot be delayed for the data collection in this
+targetpanel.}
 
 \item{\code{schemes_served_all}}{Factor. A concatenation of schemes, separated by
 \code{"|"}, that will make use of this scheduled field activity group (FAG) in
 the specified spatial sampling unit. It includes the schemes mentioned in
 \code{scheme_ps_targetpanels} but it can have more: in other schemes this FAG
-may have been optimally scheduled at a later time, but can and will use
-this FAG occasion instead.}
+would have been scheduled at a later time, but they can and will use this
+FAG occasion instead.}
 
 \item{\code{nr_schemes_current}}{Integer. The number of schemes that have scheduled
 this field activity group in the specified spatial sampling unit in the
@@ -130,6 +131,11 @@ belongs to type \code{7220}?}
 the specified spatial sampling unit be put on hold because the sampling
 unit belongs to a floating (fen) type? Currently this is defined as type
 \verb{7140_mrd}.}
+
+\item{\code{wait_mhq}}{Logical. Should the scheduled field activity group in the
+specified spatial sampling unit be put on hold because in the considered
+date interval (year) the field activity group is only needed for a MHQ
+scheme? (The latter is seen in the value of \code{scheme_ps_targetpanels}.)}
 }}
 
 \concept{code snippets objects}
