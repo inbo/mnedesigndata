@@ -17,16 +17,17 @@
 #' @field scheme_ps_targetpanels Factor. A concatenation of `"{scheme}:PS{panel
 #'   set number}{targetpanel}"` strings, separated by `" | "` in case more than
 #'   one targetpanel applies. It represents the different targetpanels (each
-#'   belonging to a scheme and panel set) for which this field activity group
-#'   was planned for the specified spatial sampling unit in the specified date
-#'   interval.
+#'   belonging to a scheme and panel set) for which this field activity group in
+#'   the specified spatial sampling unit needs to be done in the specified date
+#'   interval as it cannot be delayed for the data collection in this
+#'   targetpanel.
 #'
 #' @field schemes_served_all Factor. A concatenation of schemes, separated by
 #'   `"|"`, that will make use of this scheduled field activity group (FAG) in
 #'   the specified spatial sampling unit. It includes the schemes mentioned in
 #'   `scheme_ps_targetpanels` but it can have more: in other schemes this FAG
-#'   may have been optimally scheduled at a later time, but can and will use
-#'   this FAG occasion instead.
+#'   would have been scheduled at a later time, but they can and will use this
+#'   FAG occasion instead.
 #'
 #' @field nr_schemes_current Integer. The number of schemes that have scheduled
 #'   this field activity group in the specified spatial sampling unit in the
@@ -118,6 +119,11 @@
 #'   the specified spatial sampling unit be put on hold because the sampling
 #'   unit belongs to a floating (fen) type? Currently this is defined as type
 #'   `7140_mrd`.
+#'
+#' @field wait_mhq Logical. Should the scheduled field activity group in the
+#'   specified spatial sampling unit be put on hold because in the considered
+#'   date interval (year) the field activity group is only needed for a MHQ
+#'   scheme? (The latter is seen in the value of `scheme_ps_targetpanels`.)
 #'
 #' @source The code snippets file, which creates objects derived from REP
 #'   objects. See
