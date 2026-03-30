@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -153,16 +153,17 @@ edited (postponed) compared to fag_stratum_grts_calendar.</p>
 <dl>
 <dt><code>scheme_ps_targetpanels</code></dt><dd><p>Factor. A concatenation of <code>"{scheme}:PS{panel set number}{targetpanel}"</code> strings, separated by <code>" | "</code> in case more than
 one targetpanel applies. It represents the different targetpanels (each
-belonging to a scheme and panel set) for which this field activity group
-was planned for the specified spatial sampling unit in the specified date
-interval.</p></dd>
+belonging to a scheme and panel set) for which this field activity group in
+the specified spatial sampling unit needs to be done in the specified date
+interval as it cannot be delayed for the data collection in this
+targetpanel.</p></dd>
 
 <dt><code>schemes_served_all</code></dt><dd><p>Factor. A concatenation of schemes, separated by
 <code>"|"</code>, that will make use of this scheduled field activity group (FAG) in
 the specified spatial sampling unit. It includes the schemes mentioned in
 <code>scheme_ps_targetpanels</code> but it can have more: in other schemes this FAG
-may have been optimally scheduled at a later time, but can and will use
-this FAG occasion instead.</p></dd>
+would have been scheduled at a later time, but they can and will use this
+FAG occasion instead.</p></dd>
 
 <dt><code>nr_schemes_current</code></dt><dd><p>Integer. The number of schemes that have scheduled
 this field activity group in the specified spatial sampling unit in the
@@ -254,6 +255,11 @@ belongs to type <code>7220</code>?</p></dd>
 the specified spatial sampling unit be put on hold because the sampling
 unit belongs to a floating (fen) type? Currently this is defined as type
 <code>7140_mrd</code>.</p></dd>
+
+<dt><code>wait_mhq</code></dt><dd><p>Logical. Should the scheduled field activity group in the
+specified spatial sampling unit be put on hold because in the considered
+date interval (year) the field activity group is only needed for a MHQ
+scheme? (The latter is seen in the value of <code>scheme_ps_targetpanels</code>.)</p></dd>
 
 </dl>
 
