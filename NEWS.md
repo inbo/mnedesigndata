@@ -1,3 +1,5 @@
+# mnedesigndata (development version)
+
 # mnedesigndata 0.1.1 (2026-03-30)
 
 - Add description of column `wait_mhq` for `fieldwork_shortterm_prioritization_by_stratum`.
