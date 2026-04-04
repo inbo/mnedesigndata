@@ -53,6 +53,13 @@ in a later date interval, but that will be using this occasion instead.}
 stratified sampling design and inference. Defined by the \link{n2khab_strata}
 data frame.}
 
+\item{\code{grts_join_method}}{Factor. The method that has served to assign a GRTS
+address to the sampling unit.}
+
+\item{\code{sample_support_code}}{Factor. Code that reflects the sample support,
+i.e. geometric properties (size, shape, orientation) that define the
+sampling unit. The sample support depends on the type (hence on stratum).}
+
 \item{\code{grts_address}}{Integer. The GRTS address from the
 \href{https://doi.org/10.5281/zenodo.2611233}{\code{GRTSmaster_habitats}} data source
 that has been drawn when creating the sample. \strong{\code{grts_address} and
@@ -67,8 +74,8 @@ identify the spatial sampling unit. (\code{grts_address_final} can also be
 regarded as a secondary sampling unit within a larger primary sampling unit
 determined by \code{grts_address} and \code{stratum}.)}
 
-\item{\code{grts_join_method}}{Factor. The method that has served to assign a GRTS
-address to the sampling unit.}
+\item{\code{domain_part}}{Factor. The domain partition to which the spatial sampling
+unit belongs.}
 
 \item{\code{is_forest}}{Logical. Does the stratum correspond to a forest type?
 Forest types are defined using the regex \code{"^9|^2180|^rbbppm"}.}
@@ -79,8 +86,13 @@ spatial sample of MHQ (at the Flemish level)?}
 \item{\code{last_type_assessment_in_field}}{Logical. Did the sampling unit get a
 field assessment in the past as part of MHQ (at the Flemish level)?}
 
-\item{\code{domain_part}}{Factor. The domain partition to which the spatial sampling
-unit belongs.}
+\item{\code{last_type_assessment}}{Date. Latest available MHQ field assessment date for
+the sampling unit in MHQ (at the Flemish level).}
+
+\item{\code{last_inaccessible}}{Factor. The degree of inaccessibility during the
+latest available MHQ field assessment for the sampling unit (MHQ at the
+Flemish level). Possible factor levels (if not missing) are \code{"short term"}
+and \code{"long term"}, reflecting an estimated duration of inaccessibility.}
 
 \item{\code{scheme_ps_oldtargetpanel}}{Factor. A string formatted as
 \code{"{scheme}:PS{panel set number}{targetpanel}"} but according to an older

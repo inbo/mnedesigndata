@@ -41,6 +41,13 @@
 #'   stratified sampling design and inference. Defined by the [n2khab_strata]
 #'   data frame.
 #'
+#' @field grts_join_method Factor. The method that has served to assign a GRTS
+#'   address to the sampling unit.
+#'
+#' @field sample_support_code Factor. Code that reflects the sample support,
+#'   i.e. geometric properties (size, shape, orientation) that define the
+#'   sampling unit. The sample support depends on the type (hence on stratum).
+#'
 #' @field grts_address Integer. The GRTS address from the
 #'   [`GRTSmaster_habitats`](https://doi.org/10.5281/zenodo.2611233) data source
 #'   that has been drawn when creating the sample. **`grts_address` and
@@ -55,8 +62,8 @@
 #'   regarded as a secondary sampling unit within a larger primary sampling unit
 #'   determined by `grts_address` and `stratum`.)
 #'
-#' @field grts_join_method Factor. The method that has served to assign a GRTS
-#'   address to the sampling unit.
+#' @field domain_part Factor. The domain partition to which the spatial sampling
+#'   unit belongs.
 #'
 #' @field is_forest Logical. Does the stratum correspond to a forest type?
 #'   Forest types are defined using the regex `"^9|^2180|^rbbppm"`.
@@ -67,8 +74,13 @@
 #' @field last_type_assessment_in_field Logical. Did the sampling unit get a
 #'   field assessment in the past as part of MHQ (at the Flemish level)?
 #'
-#' @field domain_part Factor. The domain partition to which the spatial sampling
-#'   unit belongs.
+#' @field last_type_assessment Date. Latest available MHQ field assessment date for
+#'   the sampling unit in MHQ (at the Flemish level).
+#'
+#' @field last_inaccessible Factor. The degree of inaccessibility during the
+#'   latest available MHQ field assessment for the sampling unit (MHQ at the
+#'   Flemish level). Possible factor levels (if not missing) are `"short term"`
+#'   and `"long term"`, reflecting an estimated duration of inaccessibility.
 #'
 #' @field scheme_ps_oldtargetpanel Factor. A string formatted as
 #'   `"{scheme}:PS{panel set number}{targetpanel}"` but according to an older
