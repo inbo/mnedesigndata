@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data frame 'fieldwork_shortterm_prioritization_by_stratum' — fieldwork_shortterm_prioritization_by_stratum • mnedesigndata</title>
+<title>Designed short-term fieldwork calendar with extra attributes — fieldwork_shortterm_prioritization_by_stratum • mnedesigndata</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,7 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Data frame 'fieldwork_shortterm_prioritization_by_stratum' — fieldwork_shortterm_prioritization_by_stratum" />
+<meta property="og:title" content="Designed short-term fieldwork calendar with extra attributes — fieldwork_shortterm_prioritization_by_stratum" />
 <meta property="og:description" content="The data frame fieldwork_shortterm_prioritization_by_stratum is an extract
 from fag_stratum_grts_calendar and has extra attribute columns. The aim is
 to provide the input needed for shortterm fieldwork planning and
@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -118,7 +118,7 @@ columns." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data frame 'fieldwork_shortterm_prioritization_by_stratum'</h1>
+    <h1>Designed short-term fieldwork calendar with extra attributes</h1>
     <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/snippetdata.R'><code>R/snippetdata.R</code></a></small>
     <div class="hidden name"><code>fieldwork_shortterm_prioritization_by_stratum.Rd</code></div>
     </div>
@@ -177,6 +177,13 @@ in a later date interval, but that will be using this occasion instead.</p></dd>
 stratified sampling design and inference. Defined by the n2khab_strata
 data frame.</p></dd>
 
+<dt><code>grts_join_method</code></dt><dd><p>Factor. The method that has served to assign a GRTS
+address to the sampling unit.</p></dd>
+
+<dt><code>sample_support_code</code></dt><dd><p>Factor. Code that reflects the sample support,
+i.e. geometric properties (size, shape, orientation) that define the
+sampling unit. The sample support depends on the type (hence on stratum).</p></dd>
+
 <dt><code>grts_address</code></dt><dd><p>Integer. The GRTS address from the
 <a href='https://doi.org/10.5281/zenodo.2611233'><code>GRTSmaster_habitats</code></a> data source
 that has been drawn when creating the sample. <strong><code>grts_address</code> and
@@ -191,8 +198,8 @@ identify the spatial sampling unit. (<code>grts_address_final</code> can also be
 regarded as a secondary sampling unit within a larger primary sampling unit
 determined by <code>grts_address</code> and <code>stratum</code>.)</p></dd>
 
-<dt><code>grts_join_method</code></dt><dd><p>Factor. The method that has served to assign a GRTS
-address to the sampling unit.</p></dd>
+<dt><code>domain_part</code></dt><dd><p>Factor. The domain partition to which the spatial sampling
+unit belongs.</p></dd>
 
 <dt><code>is_forest</code></dt><dd><p>Logical. Does the stratum correspond to a forest type?
 Forest types are defined using the regex <code>"^9|^2180|^rbbppm"</code>.</p></dd>
@@ -203,8 +210,13 @@ spatial sample of MHQ (at the Flemish level)?</p></dd>
 <dt><code>last_type_assessment_in_field</code></dt><dd><p>Logical. Did the sampling unit get a
 field assessment in the past as part of MHQ (at the Flemish level)?</p></dd>
 
-<dt><code>domain_part</code></dt><dd><p>Factor. The domain partition to which the spatial sampling
-unit belongs.</p></dd>
+<dt><code>last_type_assessment</code></dt><dd><p>Date. Latest available MHQ field assessment date for
+the sampling unit in MHQ (at the Flemish level).</p></dd>
+
+<dt><code>last_inaccessible</code></dt><dd><p>Factor. The degree of inaccessibility during the
+latest available MHQ field assessment for the sampling unit (MHQ at the
+Flemish level). Possible factor levels (if not missing) are <code>"short term"</code>
+and <code>"long term"</code>, reflecting an estimated duration of inaccessibility.</p></dd>
 
 <dt><code>scheme_ps_oldtargetpanel</code></dt><dd><p>Factor. A string formatted as
 <code>"{scheme}:PS{panel set number}{targetpanel}"</code> but according to an older
