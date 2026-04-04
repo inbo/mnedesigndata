@@ -1,4 +1,4 @@
-#' Data frame 'fieldwork_shortterm_prioritization_by_stratum'
+#' Designed short-term fieldwork calendar with extra attributes
 #'
 #' The data frame `fieldwork_shortterm_prioritization_by_stratum` is an extract
 #' from [fag_stratum_grts_calendar] and has extra attribute columns. The aim is

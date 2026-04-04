@@ -2,7 +2,7 @@
 % Please edit documentation in R/snippetdata.R
 \name{fieldwork_shortterm_prioritization_by_stratum}
 \alias{fieldwork_shortterm_prioritization_by_stratum}
-\title{Data frame 'fieldwork_shortterm_prioritization_by_stratum'}
+\title{Designed short-term fieldwork calendar with extra attributes}
 \source{
 The code snippets file, which creates objects derived from REP
 objects. See
