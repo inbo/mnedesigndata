@@ -1,6 +1,3 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # mnedesigndata
 
 <!-- badges: start -->
@@ -29,8 +26,13 @@ To install the current package version from the `main` branch (latest
 stable release), run:
 
 ``` r
-install.packages("mnedesigndata", repos = c(inbo = "https://inbo.r-universe.dev", 
-                                            CRAN = "https://cloud.r-project.org"))
+install.packages(
+  "mnedesigndata",
+  repos = c(
+    inbo = "https://inbo.r-universe.dev",
+    CRAN = "https://cloud.r-project.org"
+  )
+)
 ```
 
 The above provides a pre-compiled package for Windows and macOS, which
@@ -41,9 +43,11 @@ case **`install.packages("mnedesigndata")`** is all you need!
 If you want to install from the source repository, run:
 
 ``` r
-remotes::install_github("inbo/mnedesigndata",
-                        build_vignettes = TRUE,
-                        upgrade = TRUE)
+remotes::install_github(
+  "inbo/mnedesigndata",
+  build_vignettes = TRUE,
+  upgrade = TRUE
+)
 ```
 
 Note that this will install the package from the `main` branch. If you
