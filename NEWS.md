@@ -1,4 +1,4 @@
-# mnedesigndata (development version)
+# mnedesigndata 0.1.2 (2026-04-04)
 
 - Add three new columns for `fieldwork_shortterm_prioritization_by_stratum`.
 - Follow updated column order of `fieldwork_shortterm_prioritization_by_stratum`.
