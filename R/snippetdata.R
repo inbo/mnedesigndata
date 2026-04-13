@@ -1,7 +1,7 @@
 #' Designed short-term fieldwork calendar with extra attributes
 #'
 #' The data frame `fieldwork_shortterm_prioritization_by_stratum` is an extract
-#' from [fag_stratum_grts_calendar] and has extra attribute columns. The aim is
+#' from [`fag_stratum_grts_calendar`] and has extra attribute columns. The aim is
 #' to provide the input needed for shortterm fieldwork planning and
 #' prioritization, based on the designed revisit pattern of the most important
 #' field activities. For that reason, it has the `priority` and `wait_xxx`
@@ -12,7 +12,7 @@
 #' units.
 #'
 #' The dates of early `"LOCEVAL"`-containing field activity groups may have been
-#' edited (postponed) compared to [fag_stratum_grts_calendar].
+#' edited (postponed) compared to [`fag_stratum_grts_calendar`].
 #'
 #' @field scheme_ps_targetpanels Factor. A concatenation of `"{scheme}:PS{panel
 #'   set number}{targetpanel}"` strings, separated by `" | "` in case more than
@@ -38,7 +38,7 @@
 #'   in a later date interval, but that will be using this occasion instead.
 #'
 #' @field stratum Factor. A type or a subdivision thereof, used in the
-#'   stratified sampling design and inference. Defined by the [n2khab_strata]
+#'   stratified sampling design and inference. Defined by the [`n2khab_strata`]
 #'   data frame.
 #'
 #' @field grts_join_method Factor. The method that has served to assign a GRTS
@@ -85,7 +85,7 @@
 #' @field scheme_ps_oldtargetpanel Factor. A string formatted as
 #'   `"{scheme}:PS{panel set number}{targetpanel}"` but according to an older
 #'   version of the REP. Most rows have a missing value, but rows with a value
-#'   refer to a part of [fag_stratum_grts_calendar] from an older REP version
+#'   refer to a part of [`fag_stratum_grts_calendar`] from an older REP version
 #'   that has been appended to the current version.
 #'
 #' @field date_start Date. Start of the date interval during which the field

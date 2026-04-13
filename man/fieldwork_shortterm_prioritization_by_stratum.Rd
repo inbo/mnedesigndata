@@ -10,7 +10,7 @@ objects. See
 }
 \description{
 The data frame \code{fieldwork_shortterm_prioritization_by_stratum} is an extract
-from \link{fag_stratum_grts_calendar} and has extra attribute columns. The aim is
+from \code{\link{fag_stratum_grts_calendar}} and has extra attribute columns. The aim is
 to provide the input needed for shortterm fieldwork planning and
 prioritization, based on the designed revisit pattern of the most important
 field activities. For that reason, it has the \code{priority} and \code{wait_xxx}
@@ -22,7 +22,7 @@ are given because they drive subsampling locations in cell-based sampling
 units.
 
 The dates of early \code{"LOCEVAL"}-containing field activity groups may have been
-edited (postponed) compared to \link{fag_stratum_grts_calendar}.
+edited (postponed) compared to \code{\link{fag_stratum_grts_calendar}}.
 }
 \section{Fields}{
 
@@ -50,7 +50,7 @@ scheduled this field activity group in the specified spatial sampling unit
 in a later date interval, but that will be using this occasion instead.}
 
 \item{\code{stratum}}{Factor. A type or a subdivision thereof, used in the
-stratified sampling design and inference. Defined by the \link{n2khab_strata}
+stratified sampling design and inference. Defined by the \code{\link{n2khab_strata}}
 data frame.}
 
 \item{\code{grts_join_method}}{Factor. The method that has served to assign a GRTS
@@ -97,7 +97,7 @@ and \code{"long term"}, reflecting an estimated duration of inaccessibility.}
 \item{\code{scheme_ps_oldtargetpanel}}{Factor. A string formatted as
 \code{"{scheme}:PS{panel set number}{targetpanel}"} but according to an older
 version of the REP. Most rows have a missing value, but rows with a value
-refer to a part of \link{fag_stratum_grts_calendar} from an older REP version
+refer to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP version
 that has been appended to the current version.}
 
 \item{\code{date_start}}{Date. Start of the date interval during which the field
