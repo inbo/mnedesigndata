@@ -120,7 +120,7 @@ NULL
 
 
 
-#' Strata for sampling and inference
+#' Target field activities per module and scheme
 #'
 #' The data frame `mod_scheme_targetfieldactivity` contains the main field
 #' activities that are related to the target variable(s) of a module and scheme.
