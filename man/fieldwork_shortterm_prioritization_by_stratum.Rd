@@ -3,6 +3,9 @@
 \name{fieldwork_shortterm_prioritization_by_stratum}
 \alias{fieldwork_shortterm_prioritization_by_stratum}
 \title{Designed short-term fieldwork calendar with extra attributes}
+\format{
+Data frame.
+}
 \source{
 The code snippets file, which creates objects derived from REP
 objects. See

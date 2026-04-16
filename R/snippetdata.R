@@ -14,6 +14,8 @@
 #' The dates of early `"LOCEVAL"`-containing field activity groups may have been
 #' edited (postponed) compared to [`fag_stratum_grts_calendar`].
 #'
+#' @inherit modules format
+#'
 #' @field scheme_ps_targetpanels Factor. A concatenation of `"{scheme}:PS{panel
 #'   set number}{targetpanel}"` strings, separated by `" | "` in case more than
 #'   one targetpanel applies. It represents the different targetpanels (each
