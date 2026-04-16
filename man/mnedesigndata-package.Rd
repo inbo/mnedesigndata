@@ -27,6 +27,11 @@ Useful links:
 \author{
 \strong{Maintainer}: Floris Vanderhaeghe \email{floris.vanderhaeghe@inbo.be} (\href{https://orcid.org/0000-0002-6378-6229}{ORCID})
 
+Authors:
+\itemize{
+  \item Floris Vanderhaeghe \email{floris.vanderhaeghe@inbo.be} (\href{https://orcid.org/0000-0002-6378-6229}{ORCID})
+}
+
 Other contributors:
 \itemize{
   \item Research Institute for Nature and Forest (INBO) \email{info@inbo.be} [copyright holder]
