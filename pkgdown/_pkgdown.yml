@@ -23,6 +23,9 @@ reference:
   - title: "Derived REP objects with regard to variables and activities"
     contents:
     - has_concept("derived REP objects with regard to variables and activities")
+  - title: "REP objects about spatial population size"
+    contents:
+    - has_concept("REP objects about spatial population size")
   - title: "REP objects of the design outcome"
     contents:
     - has_concept("REP objects of the design outcome")
