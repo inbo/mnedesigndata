@@ -144,8 +144,8 @@ NULL
 #' subset
 #'
 #' The data frame `mod_scheme_field_activity` contains all field activities and
-#' associated field activity groups per module, scheme and spatial subset. They
-#' follow from the applicable activity sequences.
+#' associated field activity groups (FAGs) for each activity sequence in a
+#' module x scheme x spatial subset.
 #'
 #' `mod_scheme_field_activity` (indirectly) builds on
 #' [`mod_scheme_variableset_mainfieldactivity`], [`activity_sequences`] and
