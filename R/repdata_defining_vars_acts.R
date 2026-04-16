@@ -151,10 +151,13 @@ NULL
 #' [`mod_scheme_variableset_mainfieldactivity`], [`activity_sequences`] and
 #' properties of the target populations.
 #'
-#' XXXXXX **Omit once columns have been described**: XXXXXXXXXXXXXXXX The
-#' spatial subset is currently used to distinguish between aquatic and
-#' terrestrial strata, where this is relevant to determine the applicable
-#' activity sequence (i.e. for involved field activity groups).
+#' @section Spatial subset XXXXXXXXXXXXXX:
+#'
+#'   XXXXXX **Omit once columns have been described**: XXXXXXXXXXXXXXXX The
+#'   spatial subset is used in multiple objects and currently only concerns the
+#'   distinction between aquatic and terrestrial strata (column
+#'   `in_aquatic_subset`). It is relevant to determine the applicable activity
+#'   sequence (i.e. for involved field activity groups).
 #'
 #' @inherit modules source format
 #' @inheritSection module_schemes Restriction by domains and sampling frames
