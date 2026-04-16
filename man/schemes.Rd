@@ -11,8 +11,8 @@ The REP (revisitplan) workflow. See
 \url{https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan}.
 }
 \description{
-The data frame \code{schemes} contains the schemes listed by at least one 'scheme
-{+} target population set' of the \code{\link{scheme_targetpop_sets}} object.
+The data frame \code{schemes} contains the schemes listed by at least one
+'scheme + target population set' of the \code{\link{scheme_targetpop_sets}} object.
 }
 \seealso{
 Other derivatives of defining REP objects:

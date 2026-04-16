@@ -13,7 +13,7 @@ The REP (revisitplan) workflow. See
 \description{
 The data frame \code{scheme_targetpop_sets} defines different collections of
 schemes with associated target populations. Each submodule in the
-\code{\link{submodules}} object refers to a single 'scheme {+} target population set',
+\code{\link{submodules}} object refers to a single 'scheme + target population set',
 i.e. to one row of this data frame.
 }
 \details{

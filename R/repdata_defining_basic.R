@@ -82,7 +82,7 @@ NULL
 #'
 #' The data frame `scheme_targetpop_sets` defines different collections of
 #' schemes with associated target populations. Each submodule in the
-#' [`submodules`] object refers to a single 'scheme {+} target population set',
+#' [`submodules`] object refers to a single 'scheme + target population set',
 #' i.e. to one row of this data frame.
 #'
 #' The target populations are given at type level and at stratum level. The
@@ -108,8 +108,8 @@ NULL
 
 #' All schemes considered by `scheme_targetpop_sets`
 #'
-#' The data frame `schemes` contains the schemes listed by at least one 'scheme
-#' {+} target population set' of the [`scheme_targetpop_sets`] object.
+#' The data frame `schemes` contains the schemes listed by at least one
+#' 'scheme + target population set' of the [`scheme_targetpop_sets`] object.
 #'
 #' @inherit modules source format
 #'
@@ -124,7 +124,7 @@ NULL
 #' All target populations considered by `scheme_targetpop_sets`, at type level
 #'
 #' The data frame `targetpops` contains the target populations (at type level)
-#' listed by at least one 'scheme {+} target population set' of the
+#' listed by at least one 'scheme + target population set' of the
 #' [`scheme_targetpop_sets`] object.
 #'
 #' @inherit modules source format
@@ -141,7 +141,7 @@ NULL
 #' level
 #'
 #' The data frame `targetpops_strata` contains the target populations (at
-#' stratum level) listed by at least one 'scheme {+} target population set' of
+#' stratum level) listed by at least one 'scheme + target population set' of
 #' the [`scheme_targetpop_sets`] object.
 #'
 #' @inherit modules source format

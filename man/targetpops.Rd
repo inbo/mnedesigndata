@@ -12,7 +12,7 @@ The REP (revisitplan) workflow. See
 }
 \description{
 The data frame \code{targetpops} contains the target populations (at type level)
-listed by at least one 'scheme {+} target population set' of the
+listed by at least one 'scheme + target population set' of the
 \code{\link{scheme_targetpop_sets}} object.
 }
 \seealso{
