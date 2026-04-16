@@ -13,19 +13,24 @@ The REP (revisitplan) workflow. See
 }
 \description{
 The data frame \code{mod_scheme_field_activity} contains all field activities and
-associated field activity groups per module, scheme and spatial subset. They
-follow from the applicable activity sequences.
+associated field activity groups (FAGs) for each activity sequence in a
+module x scheme x spatial subset.
 }
 \details{
 \code{mod_scheme_field_activity} (indirectly) builds on
 \code{\link{mod_scheme_variableset_mainfieldactivity}}, \code{\link{activity_sequences}} and
 properties of the target populations.
+}
+\section{Spatial subset XXXXXXXXXXXXXX}{
+
 
 XXXXXX \strong{Omit once columns have been described}: XXXXXXXXXXXXXXXX The
-spatial subset is currently used to distinguish between aquatic and
-terrestrial strata, where this is relevant to determine the applicable
-activity sequence (i.e. for involved field activity groups).
+spatial subset is used in multiple objects and currently only concerns the
+distinction between aquatic and terrestrial strata (column
+\code{in_aquatic_subset}). It is relevant to determine the applicable activity
+sequence (i.e. for involved field activity groups).
 }
+
 \section{Restriction by domains and sampling frames}{
 
 

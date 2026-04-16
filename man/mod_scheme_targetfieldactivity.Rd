@@ -2,7 +2,7 @@
 % Please edit documentation in R/repdata_defining_vars_acts.R
 \name{mod_scheme_targetfieldactivity}
 \alias{mod_scheme_targetfieldactivity}
-\title{Strata for sampling and inference}
+\title{Target field activities per module and scheme}
 \format{
 Data frame.
 }
@@ -12,7 +12,8 @@ The REP (revisitplan) workflow. See
 }
 \description{
 The data frame \code{mod_scheme_targetfieldactivity} contains the main field
-activities that are related to the target variable(s) of a module and scheme.
+activities that are related to the target variable(s) of a module and scheme:
+the so-called 'target field activities'.
 }
 \details{
 \code{mod_scheme_targetfieldactivity} is indirectly derived from
