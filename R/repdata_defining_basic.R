@@ -314,9 +314,10 @@ NULL
 #' the schemes with sampling approaches, not the census approaches, and this
 #' also leads to a further restriction.
 #'
-#' `module_domain_schemes` is indirectly based on [`sp_samplingframe_domain`]
-#' (through [`submod_dom_scheme_ssf_stratum_nunits`]) and
-#' [`scheme_sampling_frame`].
+#' `module_domain_schemes` is derived from
+#' [`submod_dom_scheme_ssf_stratum_nunits`], which is in turn derived from
+#' [`scheme_sampling_frame`], [`sp_samplingframe_domain`] and a few other
+#' objects (see there).
 #'
 #' `module_domain_schemes` has been used to limit several module:scheme objects
 #' that had been made before, such as [`module_schemes`], [`module_targetpops`],

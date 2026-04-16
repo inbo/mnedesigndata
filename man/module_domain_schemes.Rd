@@ -20,9 +20,10 @@ For MHQ schemes, \code{module_domain_schemes} only considers – on a domain bas
 the schemes with sampling approaches, not the census approaches, and this
 also leads to a further restriction.
 
-\code{module_domain_schemes} is indirectly based on \code{\link{sp_samplingframe_domain}}
-(through \code{\link{submod_dom_scheme_ssf_stratum_nunits}}) and
-\code{\link{scheme_sampling_frame}}.
+\code{module_domain_schemes} is derived from
+\code{\link{submod_dom_scheme_ssf_stratum_nunits}}, which is in turn derived from
+\code{\link{scheme_sampling_frame}}, \code{\link{sp_samplingframe_domain}} and a few other
+objects (see there).
 
 \code{module_domain_schemes} has been used to limit several module:scheme objects
 that had been made before, such as \code{\link{module_schemes}}, \code{\link{module_targetpops}},
