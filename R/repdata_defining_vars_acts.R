@@ -123,7 +123,8 @@ NULL
 #' Target field activities per module and scheme
 #'
 #' The data frame `mod_scheme_targetfieldactivity` contains the main field
-#' activities that are related to the target variable(s) of a module and scheme.
+#' activities that are related to the target variable(s) of a module and scheme:
+#' the so-called 'target field activities'.
 #'
 #' `mod_scheme_targetfieldactivity` is indirectly derived from
 #' [`mod_scheme_variableset_mainfieldactivity`].
