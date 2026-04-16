@@ -11,3 +11,18 @@ reference:
   - title: "Code snippets objects"
     contents:
     - has_concept("code snippets objects")
+  - title: "Basic defining REP objects"
+    contents:
+    - has_concept("basic defining REP objects")
+  - title: "Derivatives of basic defining REP objects"
+    contents:
+    - has_concept("derivatives of basic defining REP objects")
+  - title: "REP objects that define variables and activities"
+    contents:
+    - has_concept("REP objects that define variables and activities")
+  - title: "Derived REP objects with regard to variables and activities"
+    contents:
+    - has_concept("derived REP objects with regard to variables and activities")
+  - title: "REP objects of the design outcome"
+    contents:
+    - has_concept("REP objects of the design outcome")
