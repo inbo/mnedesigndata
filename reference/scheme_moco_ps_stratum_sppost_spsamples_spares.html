@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package • mnedesigndata</title>
+<title>Spatial samples plus spare sampling units — scheme_moco_ps_stratum_sppost_spsamples_spares • mnedesigndata</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package" />
-<meta property="og:description" content="mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it." />
+<meta property="og:title" content="Spatial samples plus spare sampling units — scheme_moco_ps_stratum_sppost_spsamples_spares" />
+<meta property="og:description" content="The data frame scheme_moco_ps_stratum_sppost_spsamples_spares contains the
+spatial samples plus the spare units per stratum, for each scheme x panel set
+x module combo." />
 
 
 
@@ -113,46 +115,60 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE)</h1>
-    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/mnedesigndata.R'><code>R/mnedesigndata.R</code></a></small>
-    <div class="hidden name"><code>mnedesigndata-package.Rd</code></div>
+    <h1>Spatial samples plus spare sampling units</h1>
+    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/repdata_samples.R'><code>R/repdata_samples.R</code></a></small>
+    <div class="hidden name"><code>scheme_moco_ps_stratum_sppost_spsamples_spares.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it.</p>
+    <p>The data frame <code>scheme_moco_ps_stratum_sppost_spsamples_spares</code> contains the
+spatial samples plus the spare units per stratum, for each scheme x panel set
+x module combo.</p>
     </div>
 
 
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Data frame.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>The REP (revisitplan) workflow. See
+<a href='https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan'>https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan</a>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>See the <a href='00Index.html'>Index</a>
-for documentation of datasets delivered with the package.
-A more accessible grouping structure is presented in the
-<a href='https://inbo.github.io/mnedesigndata/reference'>online reference</a>.</p>
-<p>For contributing, see the README on
-<a href='https://github.com/inbo/mnedesigndata/blob/master/README.md'>GitHub</a>.</p>
+    <p><code>scheme_moco_ps_stratum_sppost_spsamples_spares</code> is the first result of the
+spatial sampling procedure that distinguishes the spatial poststrata.</p>
+<p>Note that spatial samples typically overlap between schemes, i.e. where the
+scheme's target populations overlap.</p>
+    <h2 class="hasAnchor" id="sample-column-notes"><a class="anchor" href="#sample-column-notes"></a>Sample column notes</h2>
+
+    
+
+
+<p>XXXXXX <strong>Omit once columns have been described</strong>: XXXXXXXXXXXXXXXX</p><ul>
+<li><p><code>grts_address</code> and <code>stratum</code> together identify the spatial sampling unit.
+See further in <code><a href='fieldwork_shortterm_prioritization_by_stratum.html'>fieldwork_shortterm_prioritization_by_stratum</a></code>.</p></li>
+<li><p>The spatial poststratum (<code>sp_poststratum</code>) serves to add spare units and
+to apply the revisit design (notably the panel membership design): it is
+based on the domain overlaps between modules in a module combo for a
+specific stratum in a scheme x panel set, so it is not an overall
+predetermined classification but a 'classification as needed'. It takes
+values of domains as well as the complement of overlapped smaller domains
+by using the suffix '_remainder', e.g. 'Flanders_remainder'. Don't use
+<code>sp_poststratum</code> to just characterize a GRTS address. If you need a fixed
+spatial partitioning across strata and schemes, make a join with
+<code><a href='domainpart_grts_n2khab.html'>domainpart_grts_n2khab</a></code>, where the 'domain partition' only represents
+areas that are mutually exclusive in space.</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://inbo.github.io/mnedesigndata'>https://inbo.github.io/mnedesigndata</a></p></li>
-<li><p><a href='https://github.com/inbo/mnedesigndata'>https://github.com/inbo/mnedesigndata</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/inbo/mnedesigndata/issues'>https://github.com/inbo/mnedesigndata/issues</a></p></li>
-</ul>
-
-</div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p><strong>Maintainer</strong>: Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p>
-<p>Authors:</p><ul>
-<li><p>Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p></li>
-</ul>
-
-<p>Other contributors:</p><ul>
-<li><p>Research Institute for Nature and Forest (INBO) <a href='mailto:info@inbo.be'>info@inbo.be</a> [copyright holder]</p></li>
-</ul>
-
-
+    <div class='dont-index'><p>Other REP objects of the design outcome:
+<code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code>,
+<code><a href='scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar.html'>scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar</a></code>,
+<code><a href='scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar.html'>scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar</a></code>,
+<code><a href='scheme_moco_ps_stratum_sppost_spsamples.html'>scheme_moco_ps_stratum_sppost_spsamples</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

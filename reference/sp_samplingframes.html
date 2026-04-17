@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package • mnedesigndata</title>
+<title>Spatial sampling frames — sp_samplingframes • mnedesigndata</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,12 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package" />
-<meta property="og:description" content="mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it." />
+<meta property="og:title" content="Spatial sampling frames — sp_samplingframes" />
+<meta property="og:description" content="The data frame sp_samplingframes defines spatial sampling frames that can
+be shared among different schemes and modules, but which are generally still
+'too large' for a specific scheme in a specific module. The object
+scheme_sampling_frame defines which spatial sampling frame should be
+further processed for use in a specific scheme." />
 
 
 
@@ -113,46 +117,50 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE)</h1>
-    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/mnedesigndata.R'><code>R/mnedesigndata.R</code></a></small>
-    <div class="hidden name"><code>mnedesigndata-package.Rd</code></div>
+    <h1>Spatial sampling frames</h1>
+    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/repdata_defining_basic.R'><code>R/repdata_defining_basic.R</code></a></small>
+    <div class="hidden name"><code>sp_samplingframes.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it.</p>
+    <p>The data frame <code>sp_samplingframes</code> defines spatial sampling frames that can
+be shared among different schemes and modules, but which are generally still
+'too large' for a specific scheme in a specific module. The object
+<code><a href='scheme_sampling_frame.html'>scheme_sampling_frame</a></code> defines which spatial sampling frame should be
+further processed for use in a specific scheme.</p>
     </div>
 
 
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Data frame.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>The REP (revisitplan) workflow. See
+<a href='https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan'>https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan</a>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>See the <a href='00Index.html'>Index</a>
-for documentation of datasets delivered with the package.
-A more accessible grouping structure is presented in the
-<a href='https://inbo.github.io/mnedesigndata/reference'>online reference</a>.</p>
-<p>For contributing, see the README on
-<a href='https://github.com/inbo/mnedesigndata/blob/master/README.md'>GitHub</a>.</p>
+    <p>These spatial sampling frames are the result of applying some special spatial
+restrictions to the base sampling frame as implied by
+<code>n2khabmon::read_scheme_types()</code>. To obtain the ultimate spatial sampling
+frame for a specific scheme in a specific module, these sampling frames must
+still be subsetted using the target population and domain implied by a scheme
+in a module. A summarized result of that final step can be found in
+<code><a href='submod_dom_scheme_ssf_stratum_nunits.html'>submod_dom_scheme_ssf_stratum_nunits</a></code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://inbo.github.io/mnedesigndata'>https://inbo.github.io/mnedesigndata</a></p></li>
-<li><p><a href='https://github.com/inbo/mnedesigndata'>https://github.com/inbo/mnedesigndata</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/inbo/mnedesigndata/issues'>https://github.com/inbo/mnedesigndata/issues</a></p></li>
-</ul>
-
-</div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p><strong>Maintainer</strong>: Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p>
-<p>Authors:</p><ul>
-<li><p>Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p></li>
-</ul>
-
-<p>Other contributors:</p><ul>
-<li><p>Research Institute for Nature and Forest (INBO) <a href='mailto:info@inbo.be'>info@inbo.be</a> [copyright holder]</p></li>
-</ul>
-
-
+    <div class='dont-index'><p>Other defining REP objects:
+<code><a href='activities.html'>activities</a></code>,
+<code><a href='activity_sequences.html'>activity_sequences</a></code>,
+<code><a href='domains.html'>domains</a></code>,
+<code><a href='mod_scheme_vars.html'>mod_scheme_vars</a></code>,
+<code><a href='module_domains.html'>module_domains</a></code>,
+<code><a href='modules.html'>modules</a></code>,
+<code><a href='n2khab_strata.html'>n2khab_strata</a></code>,
+<code><a href='scheme_sampling_frame.html'>scheme_sampling_frame</a></code>,
+<code><a href='scheme_targetpop_sets.html'>scheme_targetpop_sets</a></code>,
+<code><a href='submodules.html'>submodules</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

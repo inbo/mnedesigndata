@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package • mnedesigndata</title>
+<title>Spatiotemporal design attributes per submodule x domain x scheme x panel set — submodule_domain_scheme_ps_designattr • mnedesigndata</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE) — mnedesigndata-package" />
-<meta property="og:description" content="mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it." />
+<meta property="og:title" content="Spatiotemporal design attributes per submodule x domain x scheme x panel set — submodule_domain_scheme_ps_designattr" />
+<meta property="og:description" content="The data frame submodule_domain_scheme_ps_designattr contains the
+spatiotemporal design attributes per submodule x domain x scheme x panel set." />
 
 
 
@@ -113,46 +114,44 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>mnedesigndata: Design data of the Monitoring Programme for the Natural Environment (MNE)</h1>
-    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/mnedesigndata.R'><code>R/mnedesigndata.R</code></a></small>
-    <div class="hidden name"><code>mnedesigndata-package.Rd</code></div>
+    <h1>Spatiotemporal design attributes per submodule x domain x scheme x panel set</h1>
+    <small class="dont-index">Source: <a href='https://github.com/inbo/mnedesigndata/blob/master/R/repdata_design_attribs.R'><code>R/repdata_design_attribs.R</code></a></small>
+    <div class="hidden name"><code>submodule_domain_scheme_ps_designattr.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>mnedesigndata is an R package to distribute and document R data objects that reflect the current implementation design of the Monitoring Programme for the Natural Environment (MNE). Aspects are covered such as the scheme's spatial sampling frames, the spatiotemporal samples and the designed revisit patterns of the most important field activities. The objects originate particularly from the REP workflow (revisitplan) and scripts tied to it.</p>
+    <p>The data frame <code>submodule_domain_scheme_ps_designattr</code> contains the
+spatiotemporal design attributes per submodule x domain x scheme x panel set.</p>
     </div>
 
 
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Data frame.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>The REP (revisitplan) workflow. See
+<a href='https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan'>https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan</a>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>See the <a href='00Index.html'>Index</a>
-for documentation of datasets delivered with the package.
-A more accessible grouping structure is presented in the
-<a href='https://inbo.github.io/mnedesigndata/reference'>online reference</a>.</p>
-<p>For contributing, see the README on
-<a href='https://github.com/inbo/mnedesigndata/blob/master/README.md'>GitHub</a>.</p>
+    <p><code>submodule_domain_scheme_ps_designattr</code> is the last stage in the REP workflow
+where submodules are being distinguished; in determining stratum level sample
+sizes (see <code><a href='module_domain_scheme_ps_stratum_sample_size.html'>module_domain_scheme_ps_stratum_sample_size</a></code>) the sample sizes
+of the submodules of each module are taken together (see <code><a href='submodules.html'>submodules</a></code>).</p>
+<p>XXXXXX <strong>Omit once columns have been described</strong>: XXXXXXXXXXXXXXXX The
+spatial sample sizes refer to the submodule x domain x scheme x panel set
+level (<code>sp_sample_size_all_panels</code>) and to the level of a single
+(generalized) type (<code>sp_sample_size_all_panels_type</code>) within submodule x
+domain x scheme x panel set, respectively.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://inbo.github.io/mnedesigndata'>https://inbo.github.io/mnedesigndata</a></p></li>
-<li><p><a href='https://github.com/inbo/mnedesigndata'>https://github.com/inbo/mnedesigndata</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/inbo/mnedesigndata/issues'>https://github.com/inbo/mnedesigndata/issues</a></p></li>
-</ul>
-
-</div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p><strong>Maintainer</strong>: Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p>
-<p>Authors:</p><ul>
-<li><p>Floris Vanderhaeghe <a href='mailto:floris.vanderhaeghe@inbo.be'>floris.vanderhaeghe@inbo.be</a> (<a href='https://orcid.org/0000-0002-6378-6229'>ORCID</a>)</p></li>
-</ul>
-
-<p>Other contributors:</p><ul>
-<li><p>Research Institute for Nature and Forest (INBO) <a href='mailto:info@inbo.be'>info@inbo.be</a> [copyright holder]</p></li>
-</ul>
-
-
+    <div class='dont-index'><p>Other REP objects with design attributes:
+<code><a href='mod_scheme_ps_fag_paneldesign.html'>mod_scheme_ps_fag_paneldesign</a></code>,
+<code><a href='mod_scheme_yrs_moco_ps.html'>mod_scheme_yrs_moco_ps</a></code>,
+<code><a href='module_domain_scheme_ps_stratum_sample_size.html'>module_domain_scheme_ps_stratum_sample_size</a></code>,
+<code><a href='scheme_ps_target_paneldesign.html'>scheme_ps_target_paneldesign</a></code>,
+<code><a href='scheme_ps_variableset_paneldesign.html'>scheme_ps_variableset_paneldesign</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
