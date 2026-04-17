@@ -1,6 +1,8 @@
 #' @details
 #' See the \href{00Index.html}{Index}
 #' for documentation of datasets delivered with the package.
+#' A more accessible grouping structure is presented in the
+#' \href{https://inbo.github.io/mnedesigndata/reference}{online reference}.
 #'
 #' For contributing, see the README on
 #' \href{https://github.com/inbo/mnedesigndata/blob/master/README.md}{GitHub}.
