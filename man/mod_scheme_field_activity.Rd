@@ -55,6 +55,7 @@ approaches, and this also leads to a further restriction.
 
 \seealso{
 Other derivatives of defining REP objects:
+\code{\link{domainpart_grts_n2khab}},
 \code{\link{mod_scheme_targetfieldactivity}},
 \code{\link{mod_scheme_variableset_mainfieldactivity}},
 \code{\link{module_domain_schemes}},

@@ -19,6 +19,7 @@ this object.
 }
 \seealso{
 Other derivatives of defining REP objects:
+\code{\link{domainpart_grts_n2khab}},
 \code{\link{mod_scheme_field_activity}},
 \code{\link{mod_scheme_targetfieldactivity}},
 \code{\link{mod_scheme_variableset_mainfieldactivity}},

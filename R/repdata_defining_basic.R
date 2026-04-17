@@ -191,6 +191,36 @@ NULL
 
 
 
+#' Domain partition of each GRTS address in the base sampling frame
+#'
+#' The data frame `domainpart_grts_n2khab` classifies the GRTS addresses of the
+#' base sampling frame using the domain partition. Domain partitions are
+#' mutually exclusive in space, while domains (see [`domains`]) can spatially
+#' overlap.
+#'
+#' The domain partition is used to uniquely characterize each GRTS address,
+#' preferring its membership to the smallest (innermost) domain it belongs to,
+#' whereas the remainder of the larger (including) domain is regarded as the
+#' domain partition labelled with suffix `"_remainder"`.
+#'
+#' Note that values of the `domain_part` column can also be based on domains
+#' that are not used to drive sampling.
+#'
+#' `domainpart_grts_n2khab` is derived from the `domain_grts_n2khab` data frame,
+#' itself derived from [`domains`] and `grts_mh_n2khab` (= the
+#' `GRTSmaster_habitats` raster data source subsetted by the base sampling
+#' frame).
+#'
+#' @inherit modules source format
+#'
+#' @family derivatives of defining REP objects
+#' @concept derivatives of basic defining REP objects
+#'
+#' @name domainpart_grts_n2khab
+NULL
+
+
+
 #' Schemes per module
 #'
 #' The data frame `module_schemes` lists the schemes of each module. It is
