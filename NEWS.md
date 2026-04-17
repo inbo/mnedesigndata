@@ -1,4 +1,4 @@
-# mnedesigndata (development version)
+# mnedesigndata 0.2.0 (2026-04-17)
 
 - Document various REP objects (#5).
 
