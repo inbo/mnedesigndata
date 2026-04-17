@@ -12,14 +12,21 @@ The REP (revisitplan) workflow. See
 }
 \description{
 The data frame \code{fag_stratum_grts_calendar} represents the designed sampling
-unit calendar – across schemes – of the most important field activity groups.
-It has unique combinations of \code{stratum}, \code{grts_address}, \code{date_interval} and
-\code{field_activity_group}.
+unit calendar – across schemes – of the distinguished field activity groups
+(FAGs). It has unique combinations of \code{stratum}, \code{grts_address},
+\code{date_interval} and \code{field_activity_group}.
 }
 \details{
-The object is derived from the scheme-specific FAG calendars (object
-\code{\link{scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar}}) by
+\code{fag_stratum_grts_calendar} is derived from the scheme-specific FAG calendars
+(object \code{\link{scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar}}) by
 eliminating spatiotemporal duplication and taking into account the highest
 required FAG frequency across schemes.
+}
+\seealso{
+Other REP objects of the design outcome:
+\code{\link{scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar}},
+\code{\link{scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar}},
+\code{\link{scheme_moco_ps_stratum_sppost_spsamples}},
+\code{\link{scheme_moco_ps_stratum_sppost_spsamples_spares}}
 }
 \concept{REP objects of the design outcome}
