@@ -43,10 +43,11 @@ module combos are effectively generated and defined.
 \item However, see the derived data frame \code{\link{mod_scheme_yrs_moco_ps}} for a
 convenient object that links modules and module combos within scheme x panel
 set.
-\item The concept of module combos is important to the spatial
-sampling procedure: spatial sampling for a scheme x panel set is to be
-combined over active modules when their target panel design is the same. This
-is necessary since the modules can have overlapping domains.
+\item The concept of module combos is important to the spatial sampling
+procedure: spatial sampling for a scheme x panel set is to be combined over
+active modules when their target panel design and domain is the same. Also
+with overlapping domains, the sampling procedure must take into account the
+relation between the samples from both domains.
 }
 
 Note that the 'spatial subset' from \code{\link{mod_scheme_ps_fag_paneldesign}} is

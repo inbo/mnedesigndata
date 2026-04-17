@@ -106,17 +106,21 @@ NULL
 #' [`mod_scheme_ps_fag_paneldesign`]) have been collapsed to **module combos**
 #' (module combinations) if the corresponding target panel design is the same.
 #'
-#' - So, beware that the module combo can only be interpreted as a unique panel
+#' + So, beware that the module combo can only be interpreted as a unique panel
 #' design in combination with scheme x panel set.
-#' - `scheme_ps_target_paneldesign` is the object in the REP-workflow where the
+#'
+#' + `scheme_ps_target_paneldesign` is the object in the REP-workflow where the
 #' module combos are effectively generated and defined.
-#' - However, see the derived data frame [`mod_scheme_yrs_moco_ps`] for a
+#'
+#' + However, see the derived data frame [`mod_scheme_yrs_moco_ps`] for a
 #' convenient object that links modules and module combos within scheme x panel
 #' set.
-#' - The concept of module combos is important to the spatial
-#' sampling procedure: spatial sampling for a scheme x panel set is to be
-#' combined over active modules when their target panel design is the same. This
-#' is necessary since the modules can have overlapping domains.
+#'
+#' + The concept of module combos is important to the spatial sampling
+#' procedure: spatial sampling for a scheme x panel set is to be combined over
+#' active modules when their target panel design and domain is the same. Also
+#' with overlapping domains, the sampling procedure must take into account the
+#' relation between the samples from both domains.
 #'
 #' Note that the 'spatial subset' from [`mod_scheme_ps_fag_paneldesign`] is
 #' gone. That is because for the _main_ field activities the spatial subsets
@@ -172,11 +176,14 @@ NULL
 #'
 #' Notable differences with [`mod_scheme_ps_fag_paneldesign`] are that:
 #'
-#' - automated frequent measurements are reflected as 'frequent revisit' while
+#' + automated frequent measurements are reflected as 'frequent revisit' while
 #' fieldwork is much less frequent;
-#' - currently no distinction between modules is made;
-#' - only core schemes are considered;
-#' - no installation or maintenance is involved, since those are not main field
+#'
+#' + currently no distinction between modules is made;
+#'
+#' + only core schemes are considered;
+#'
+#' + no installation or maintenance is involved, since those are not main field
 #' activities (for a variable set).
 #'
 #' @inherit modules source format
