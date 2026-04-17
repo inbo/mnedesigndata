@@ -1,6 +1,6 @@
 Package: mnedesigndata
 Title: Design data of the Monitoring Programme for the Natural Environment (MNE)
-Version: 0.1.2
+Version: 0.2.0
 Authors@R: c(
     person("Floris", "Vanderhaeghe", email = "floris.vanderhaeghe@inbo.be", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6378-6229")), 
     person("Research Institute for Nature and Forest (INBO)", email = "info@inbo.be", role = c("cph")))
@@ -16,7 +16,8 @@ URL: https://inbo.github.io/mnedesigndata, https://github.com/inbo/mnedesigndata
 BugReports: https://github.com/inbo/mnedesigndata/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Imports: 
   curl,
   remotes
+Additional_repositories: https://inbo.r-universe.dev
+Config/roxygen2/version: 7.3.3.9000

@@ -20,6 +20,10 @@ designed revisit patterns of the most important field activities. The
 objects originate particularly from the REP workflow (revisitplan) and
 scripts tied to it.
 
+To use the documentation, best start from the 
+[online reference index](https://inbo.github.io/mnedesigndata/reference) so
+that you see the grouping structure and interrelations between objects.
+
 ## Installation
 
 To install the current package version from the `main` branch (latest
