@@ -20,4 +20,4 @@ Imports:
   curl,
   remotes
 Additional_repositories: https://inbo.r-universe.dev
-Config/roxygen2/version: 7.3.3.9000
+Config/roxygen2/version: 8.0.0

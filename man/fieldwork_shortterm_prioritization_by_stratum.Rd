@@ -13,8 +13,8 @@ objects. See
 }
 \description{
 The data frame \code{fieldwork_shortterm_prioritization_by_stratum} is an extract
-from \code{\link{fag_stratum_grts_calendar}} and has extra attribute columns. The aim is
-to provide the input needed for shortterm fieldwork planning and
+from \code{\link{fag_stratum_grts_calendar}} and has extra attribute columns. The aim
+is to provide the input needed for shortterm fieldwork planning and
 prioritization, based on the designed revisit pattern of the most important
 field activities. For that reason, it has the \code{priority} and \code{wait_xxx}
 columns.
@@ -89,19 +89,25 @@ spatial sample of MHQ (at the Flemish level)?}
 \item{\code{last_type_assessment_in_field}}{Logical. Did the sampling unit get a
 field assessment in the past as part of MHQ (at the Flemish level)?}
 
-\item{\code{last_type_assessment}}{Date. Latest available MHQ field assessment date for
-the sampling unit in MHQ (at the Flemish level).}
+\item{\code{last_type_assessment}}{Date. Latest available MHQ field assessment date
+for the sampling unit in MHQ (at the Flemish level).}
 
 \item{\code{last_inaccessible}}{Factor. The degree of inaccessibility during the
 latest available MHQ field assessment for the sampling unit (MHQ at the
 Flemish level). Possible factor levels (if not missing) are \code{"short term"}
 and \code{"long term"}, reflecting an estimated duration of inaccessibility.}
 
-\item{\code{scheme_ps_oldtargetpanel}}{Factor. A string formatted as
-\code{"{scheme}:PS{panel set number}{targetpanel}"} but according to an older
-version of the REP. Most rows have a missing value, but rows with a value
-refer to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP version
-that has been appended to the current version.}
+\item{\code{scheme_ps_oldtargetpanels}}{Factor. A string formatted as and with a
+meaning similar to \code{scheme_ps_targetpanels} but according to older versions
+of the REP. Most rows have a missing value, but rows \emph{with} a value refer
+to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP version that
+has been appended to the current version. Some of these rows may even
+concern sampling units that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
+for which selected field activity groups (FAGs) and occasions have been
+retained. The appended FAG occasions can only be applied in reality if the
+preceding FAG occasions on which they depend (not included) have already
+taken place, i.e. in the context of a previous release of the short-term
+fieldwork calendar.}
 
 \item{\code{date_start}}{Date. Start of the date interval during which the field
 activity group is scheduled in the spatial sampling unit.}
