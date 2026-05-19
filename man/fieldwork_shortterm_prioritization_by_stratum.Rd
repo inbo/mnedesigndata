@@ -160,6 +160,10 @@ unit belongs to a floating (fen) type? Currently this is defined as type
 specified spatial sampling unit be put on hold because in the considered
 date interval (year) the field activity group is only needed for a MHQ
 scheme? (The latter is seen in the value of \code{scheme_ps_targetpanels}.)}
+
+\item{\code{wait_obsolete_types}}{Logical. Should the scheduled field activity group
+in the specified spatial sampling unit be put on hold because the type will
+be obsoleted and this makes this FAG occasion in this panel set irrelevant?}
 }}
 
 \concept{code snippets objects}

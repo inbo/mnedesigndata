@@ -149,6 +149,10 @@
 #'   date interval (year) the field activity group is only needed for a MHQ
 #'   scheme? (The latter is seen in the value of `scheme_ps_targetpanels`.)
 #'
+#' @field wait_obsolete_types Logical. Should the scheduled field activity group
+#'   in the specified spatial sampling unit be put on hold because the type will
+#'   be obsoleted and this makes this FAG occasion in this panel set irrelevant?
+#'
 #' @source The code snippets file, which creates objects derived from REP
 #'   objects. See
 #'   <https://github.com/inbo/n2khab-mne-monitoring/blob/main/020_fieldwork_organization/code_snippets.R>.
