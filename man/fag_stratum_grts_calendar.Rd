@@ -21,6 +21,16 @@ unit calendar – across schemes – of the distinguished field activity groups
 (object \code{\link{scheme_moco_ps_spsubset_fag_stratum_sppost_spsamples_calendar}}) by
 eliminating spatiotemporal duplication and taking into account the highest
 required FAG frequency across schemes.
+
+\code{fag_stratum_grts_calendar} can have extensions included, i.e. appended FAG
+occasions according to older \code{fag_stratum_grts_calendar} versions, i.e. from
+older REP versions. This subset can be seen by inspecting the object
+\code{cal_old_continuation}. Some of these rows may even concern sampling units
+that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
+for which selected field activity groups (FAGs) and occasions have been
+retained. The appended FAG occasions can only be applied in reality if the
+preceding FAG occasions on which they depend (not included) have already
+taken place, i.e. in the context of a previous REP release.
 }
 \seealso{
 Other REP objects of the design outcome:
