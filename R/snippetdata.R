@@ -1,8 +1,8 @@
 #' Designed short-term fieldwork calendar with extra attributes
 #'
 #' The data frame `fieldwork_shortterm_prioritization_by_stratum` is an extract
-#' from [`fag_stratum_grts_calendar`] and has extra attribute columns. The aim is
-#' to provide the input needed for shortterm fieldwork planning and
+#' from [`fag_stratum_grts_calendar`] and has extra attribute columns. The aim
+#' is to provide the input needed for shortterm fieldwork planning and
 #' prioritization, based on the designed revisit pattern of the most important
 #' field activities. For that reason, it has the `priority` and `wait_xxx`
 #' columns.
@@ -76,8 +76,8 @@
 #' @field last_type_assessment_in_field Logical. Did the sampling unit get a
 #'   field assessment in the past as part of MHQ (at the Flemish level)?
 #'
-#' @field last_type_assessment Date. Latest available MHQ field assessment date for
-#'   the sampling unit in MHQ (at the Flemish level).
+#' @field last_type_assessment Date. Latest available MHQ field assessment date
+#'   for the sampling unit in MHQ (at the Flemish level).
 #'
 #' @field last_inaccessible Factor. The degree of inaccessibility during the
 #'   latest available MHQ field assessment for the sampling unit (MHQ at the
