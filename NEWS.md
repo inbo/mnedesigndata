@@ -1,6 +1,8 @@
 # mnedesigndata (development version)
 
-- Document the new column `scheme_ps_oldtargetpanels` (plural) of `fieldwork_shortterm_prioritization_by_stratum` that replaces `scheme_ps_oldtargetpanel`.
+- Document new columns in  `fieldwork_shortterm_prioritization_by_stratum`:
+  - `scheme_ps_oldtargetpanels` (plural), which replaces `scheme_ps_oldtargetpanel`
+  - `wait_obsolete_types`
 - Document on appended rows from old versions in `fag_stratum_grts_calendar`.
 
 # mnedesigndata 0.2.0 (2026-04-17)
