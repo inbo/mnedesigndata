@@ -35,7 +35,10 @@ one targetpanel applies. It represents the different targetpanels (each
 belonging to a scheme and panel set) for which this field activity group in
 the specified spatial sampling unit needs to be done in the specified date
 interval as it cannot be delayed for the data collection in this
-targetpanel.}
+targetpanel. For sampling units \emph{not} belonging to the current
+spatiotemporal samples (see \code{scheme_ps_oldtargetpanels}), the value of
+\code{scheme_ps_oldtargetpanels} is used instead. This is done to avoid missing
+values in derived objects or overviews.}
 
 \item{\code{schemes_served_all}}{Factor. A concatenation of schemes, separated by
 \code{"|"}, that will make use of this scheduled field activity group (FAG) in
