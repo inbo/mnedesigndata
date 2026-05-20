@@ -35,10 +35,11 @@ one targetpanel applies. It represents the different targetpanels (each
 belonging to a scheme and panel set) for which this field activity group in
 the specified spatial sampling unit needs to be done in the specified date
 interval as it cannot be delayed for the data collection in this
-targetpanel. For sampling units \emph{not} belonging to the current
-spatiotemporal samples (see \code{scheme_ps_oldtargetpanels}), the value of
-\code{scheme_ps_oldtargetpanels} is used instead. This is done to avoid missing
-values in derived objects or overviews.}
+targetpanel. For field activity group (FAG) occasions and spatial sampling
+units that do \emph{not} correspond to the current spatiotemporal samples (see
+\code{scheme_ps_oldtargetpanels}), the value of \code{scheme_ps_oldtargetpanels} is
+used instead. This is done to avoid missing values in derived objects or
+overviews.}
 
 \item{\code{schemes_served_all}}{Factor. A concatenation of schemes, separated by
 \code{"|"}, that will make use of this scheduled field activity group (FAG) in
@@ -105,7 +106,7 @@ meaning similar to \code{scheme_ps_targetpanels} but according to older versions
 of the REP. Most rows have a missing value, but rows \emph{with} a value refer
 to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP version that
 has been appended to the current version. Some of these rows may even
-concern sampling units that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
+concern spatial sampling units that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
 for which selected field activity groups (FAGs) and occasions have been
 retained. The appended FAG occasions can only be applied in reality if the
 preceding FAG occasions on which they depend (not included) have already

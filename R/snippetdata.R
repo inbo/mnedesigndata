@@ -22,10 +22,11 @@
 #'   belonging to a scheme and panel set) for which this field activity group in
 #'   the specified spatial sampling unit needs to be done in the specified date
 #'   interval as it cannot be delayed for the data collection in this
-#'   targetpanel. For sampling units _not_ belonging to the current
-#'   spatiotemporal samples (see `scheme_ps_oldtargetpanels`), the value of
-#'   `scheme_ps_oldtargetpanels` is used instead. This is done to avoid missing
-#'   values in derived objects or overviews.
+#'   targetpanel. For field activity group (FAG) occasions and spatial sampling
+#'   units that do _not_ correspond to the current spatiotemporal samples (see
+#'   `scheme_ps_oldtargetpanels`), the value of `scheme_ps_oldtargetpanels` is
+#'   used instead. This is done to avoid missing values in derived objects or
+#'   overviews.
 #'
 #' @field schemes_served_all Factor. A concatenation of schemes, separated by
 #'   `"|"`, that will make use of this scheduled field activity group (FAG) in
@@ -92,7 +93,8 @@
 #'   of the REP. Most rows have a missing value, but rows _with_ a value refer
 #'   to a part of [`fag_stratum_grts_calendar`] from an older REP version that
 #'   has been appended to the current version. Some of these rows may even
-#'   concern sampling units that are missing from the [current spatiotemporal
+#'   concern spatial sampling units that are missing from the [current
+#'   spatiotemporal
 #'   samples][scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar],
 #'   for which selected field activity groups (FAGs) and occasions have been
 #'   retained. The appended FAG occasions can only be applied in reality if the
