@@ -43,8 +43,8 @@
 
 <meta property="og:title" content="Designed short-term fieldwork calendar with extra attributes — fieldwork_shortterm_prioritization_by_stratum" />
 <meta property="og:description" content="The data frame fieldwork_shortterm_prioritization_by_stratum is an extract
-from fag_stratum_grts_calendar and has extra attribute columns. The aim is
-to provide the input needed for shortterm fieldwork planning and
+from fag_stratum_grts_calendar and has extra attribute columns. The aim
+is to provide the input needed for shortterm fieldwork planning and
 prioritization, based on the designed revisit pattern of the most important
 field activities. For that reason, it has the priority and wait_xxx
 columns." />
@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1</span>
       </span>
     </div>
 
@@ -125,8 +125,8 @@ columns." />
 
     <div class="ref-description">
     <p>The data frame <code>fieldwork_shortterm_prioritization_by_stratum</code> is an extract
-from <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> and has extra attribute columns. The aim is
-to provide the input needed for shortterm fieldwork planning and
+from <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> and has extra attribute columns. The aim
+is to provide the input needed for shortterm fieldwork planning and
 prioritization, based on the designed revisit pattern of the most important
 field activities. For that reason, it has the <code>priority</code> and <code>wait_xxx</code>
 columns.</p>
@@ -159,7 +159,11 @@ one targetpanel applies. It represents the different targetpanels (each
 belonging to a scheme and panel set) for which this field activity group in
 the specified spatial sampling unit needs to be done in the specified date
 interval as it cannot be delayed for the data collection in this
-targetpanel.</p></dd>
+targetpanel. For field activity group (FAG) occasions and spatial sampling
+units that do <em>not</em> correspond to the current spatiotemporal samples (see
+<code>scheme_ps_oldtargetpanels</code>), the value of <code>scheme_ps_oldtargetpanels</code> is
+used instead. This is done to avoid missing values in derived objects or
+overviews.</p></dd>
 
 <dt><code>schemes_served_all</code></dt><dd><p>Factor. A concatenation of schemes, separated by
 <code>"|"</code>, that will make use of this scheduled field activity group (FAG) in
@@ -213,19 +217,25 @@ spatial sample of MHQ (at the Flemish level)?</p></dd>
 <dt><code>last_type_assessment_in_field</code></dt><dd><p>Logical. Did the sampling unit get a
 field assessment in the past as part of MHQ (at the Flemish level)?</p></dd>
 
-<dt><code>last_type_assessment</code></dt><dd><p>Date. Latest available MHQ field assessment date for
-the sampling unit in MHQ (at the Flemish level).</p></dd>
+<dt><code>last_type_assessment</code></dt><dd><p>Date. Latest available MHQ field assessment date
+for the sampling unit in MHQ (at the Flemish level).</p></dd>
 
 <dt><code>last_inaccessible</code></dt><dd><p>Factor. The degree of inaccessibility during the
 latest available MHQ field assessment for the sampling unit (MHQ at the
 Flemish level). Possible factor levels (if not missing) are <code>"short term"</code>
 and <code>"long term"</code>, reflecting an estimated duration of inaccessibility.</p></dd>
 
-<dt><code>scheme_ps_oldtargetpanel</code></dt><dd><p>Factor. A string formatted as
-<code>"{scheme}:PS{panel set number}{targetpanel}"</code> but according to an older
-version of the REP. Most rows have a missing value, but rows with a value
-refer to a part of <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> from an older REP version
-that has been appended to the current version.</p></dd>
+<dt><code>scheme_ps_oldtargetpanels</code></dt><dd><p>Factor. A string formatted as and with a
+meaning similar to <code>scheme_ps_targetpanels</code> but according to older versions
+of the REP. Most rows have a missing value, but rows <em>with</em> a value refer
+to a part of <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> from an older REP version that
+has been appended to the current version. Some of these rows may even
+concern spatial sampling units that are missing from the <a href='scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar.html'>current spatiotemporal samples</a>,
+for which selected field activity groups (FAGs) and occasions have been
+retained. The appended FAG occasions can only be applied in reality if the
+preceding FAG occasions on which they depend (not included) have already
+taken place, i.e. in the context of a previous release of the short-term
+fieldwork calendar.</p></dd>
 
 <dt><code>date_start</code></dt><dd><p>Date. Start of the date interval during which the field
 activity group is scheduled in the spatial sampling unit.</p></dd>
@@ -275,6 +285,10 @@ unit belongs to a floating (fen) type? Currently this is defined as type
 specified spatial sampling unit be put on hold because in the considered
 date interval (year) the field activity group is only needed for a MHQ
 scheme? (The latter is seen in the value of <code>scheme_ps_targetpanels</code>.)</p></dd>
+
+<dt><code>wait_obsolete_types</code></dt><dd><p>Logical. Should the scheduled field activity group
+in the specified spatial sampling unit be put on hold because the type will
+be obsoleted and this makes this FAG occasion in this panel set irrelevant?</p></dd>
 
 </dl>
 
