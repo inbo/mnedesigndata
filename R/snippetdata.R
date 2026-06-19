@@ -130,8 +130,8 @@
 #'
 #' @field wait_watersurface Logical. Should the scheduled field activity group
 #'   in the specified spatial sampling unit be put on hold because the sampling
-#'   unit is a watersurface? Watersurface types are defined using the regex
-#'   `"^31|^2190_a"`.
+#'   unit is a watersurface type? The value may also depend on the schemes in
+#'   `schemes_served_all`.
 #'
 #' @field wait_3260 Logical. Should the scheduled field activity group in the
 #'   specified spatial sampling unit be put on hold because the sampling unit
