@@ -107,6 +107,18 @@
 #'   defined within an activity sequence that was assigned to the spatial
 #'   sampling unit in the context of a specific module and scheme.
 #'
+#' @field matching_occasion Factor. If present, the value is common between at
+#'   least two rows (FAG occasions). FAG occasions marked in this way as a
+#'   'matching occasion' involve the same FAG at the same GRTS address but
+#'   across different lentic strata (types). A matching date interval may also
+#'   be a requirement, depending on the FAG. Matching FAG occasions effectively
+#'   represent a single FAG occasion in the field, even though data collection
+#'   may be still be stratum-specific. The value is composed as
+#'   `<field_activity_group>_<grts_address_final>_[<formatted date interval>]`.
+#'   The date interval is missing for FAGs that match regex
+#'   `"INST|LEVREAD|SPATPOSIT"`, as they don't require the same date interval to
+#'   be 'matching'.
+#'
 #' @field scheme_ps_oldtargetpanels Factor. A string formatted as and with a
 #'   meaning similar to `scheme_ps_targetpanels` but according to older versions
 #'   of the REP. Most rows have a missing value, but rows _with_ a value refer
