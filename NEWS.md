@@ -1,5 +1,10 @@
 # mnedesigndata (development version)
 
+- Document columns in `fieldwork_shortterm_prioritization_by_stratum` (this needs the 'code snippets' since at least commit `89a3ffb`):
+  - New column `matching_occasion`, to mark rows (FAG occasions) that actually represent a single FAG occasion in the field but are linked to multiple strata.
+  The data collection may be still be stratum-specific.
+  - Existing column `wait_watersurface`: its definition was modified.
+
 # mnedesigndata 0.2.1 (2026-05-20)
 
 - Document new columns in  `fieldwork_shortterm_prioritization_by_stratum`:
