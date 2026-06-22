@@ -116,8 +116,8 @@
 #'   may be still be stratum-specific. The value is composed as
 #'   `<field_activity_group>_<grts_address_final>_[<formatted date interval>]`.
 #'   The date interval is missing for FAGs that match regex
-#'   `"INST|LEVREAD|SPATPOSIT"`, as they don't require the same date interval to
-#'   be 'matching'.
+#'   `"INST|LEVREAD|SPATPOSIT"`, as they don't require the same date interval
+#'   order to be 'matching'.
 #'
 #' @field scheme_ps_oldtargetpanels Factor. A string formatted as and with a
 #'   meaning similar to `scheme_ps_targetpanels` but according to older versions
