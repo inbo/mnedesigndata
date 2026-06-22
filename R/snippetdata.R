@@ -88,20 +88,6 @@
 #'   Flemish level). Possible factor levels (if not missing) are `"short term"`
 #'   and `"long term"`, reflecting an estimated duration of inaccessibility.
 #'
-#' @field scheme_ps_oldtargetpanels Factor. A string formatted as and with a
-#'   meaning similar to `scheme_ps_targetpanels` but according to older versions
-#'   of the REP. Most rows have a missing value, but rows _with_ a value refer
-#'   to a part of [`fag_stratum_grts_calendar`] from an older REP version that
-#'   has been appended to the current version. Some of these rows may even
-#'   concern spatial sampling units that are missing from the [current
-#'   spatiotemporal
-#'   samples][scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar],
-#'   for which selected field activity groups (FAGs) and occasions have been
-#'   retained. The appended FAG occasions can only be applied in reality if the
-#'   preceding FAG occasions on which they depend (not included) have already
-#'   taken place, i.e. in the context of a previous release of the short-term
-#'   fieldwork calendar.
-#'
 #' @field date_start Date. Start of the date interval during which the field
 #'   activity group is scheduled in the spatial sampling unit.
 #'
@@ -120,6 +106,20 @@
 #'   interval, for the same spatial sampling unit. This rank has originally been
 #'   defined within an activity sequence that was assigned to the spatial
 #'   sampling unit in the context of a specific module and scheme.
+#'
+#' @field scheme_ps_oldtargetpanels Factor. A string formatted as and with a
+#'   meaning similar to `scheme_ps_targetpanels` but according to older versions
+#'   of the REP. Most rows have a missing value, but rows _with_ a value refer
+#'   to a part of [`fag_stratum_grts_calendar`] from an older REP version that
+#'   has been appended to the current version. Some of these rows may even
+#'   concern spatial sampling units that are missing from the [current
+#'   spatiotemporal
+#'   samples][scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar],
+#'   for which selected field activity groups (FAGs) and occasions have been
+#'   retained. The appended FAG occasions can only be applied in reality if the
+#'   preceding FAG occasions on which they depend (not included) have already
+#'   taken place, i.e. in the context of a previous release of the short-term
+#'   fieldwork calendar.
 #'
 #' @field priority Integer. A rank number representing the priority of the
 #'   scheduled field activity group for the specified spatial sampling unit.
