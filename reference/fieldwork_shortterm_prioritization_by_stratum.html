@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9001</span>
       </span>
     </div>
 
@@ -225,18 +225,6 @@ latest available MHQ field assessment for the sampling unit (MHQ at the
 Flemish level). Possible factor levels (if not missing) are <code>"short term"</code>
 and <code>"long term"</code>, reflecting an estimated duration of inaccessibility.</p></dd>
 
-<dt><code>scheme_ps_oldtargetpanels</code></dt><dd><p>Factor. A string formatted as and with a
-meaning similar to <code>scheme_ps_targetpanels</code> but according to older versions
-of the REP. Most rows have a missing value, but rows <em>with</em> a value refer
-to a part of <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> from an older REP version that
-has been appended to the current version. Some of these rows may even
-concern spatial sampling units that are missing from the <a href='scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar.html'>current spatiotemporal samples</a>,
-for which selected field activity groups (FAGs) and occasions have been
-retained. The appended FAG occasions can only be applied in reality if the
-preceding FAG occasions on which they depend (not included) have already
-taken place, i.e. in the context of a previous release of the short-term
-fieldwork calendar.</p></dd>
-
 <dt><code>date_start</code></dt><dd><p>Date. Start of the date interval during which the field
 activity group is scheduled in the spatial sampling unit.</p></dd>
 
@@ -256,6 +244,30 @@ interval, for the same spatial sampling unit. This rank has originally been
 defined within an activity sequence that was assigned to the spatial
 sampling unit in the context of a specific module and scheme.</p></dd>
 
+<dt><code>matching_occasion</code></dt><dd><p>Factor. If present, the value is common between at
+least two rows (FAG occasions). FAG occasions marked in this way as a
+'matching occasion' involve the same FAG at the same GRTS address but
+across different lentic strata (types). A matching date interval may also
+be a requirement, depending on the FAG. Matching FAG occasions effectively
+represent a single FAG occasion in the field, even though data collection
+may be still be stratum-specific. The value is composed as
+<code>&lt;field_activity_group&gt;_&lt;grts_address_final&gt;_[&lt;formatted date interval&gt;]</code>.
+The date interval is missing for FAGs that match regex
+<code>"INST|LEVREAD|SPATPOSIT"</code>, as they don't require the same date interval to
+be 'matching'.</p></dd>
+
+<dt><code>scheme_ps_oldtargetpanels</code></dt><dd><p>Factor. A string formatted as and with a
+meaning similar to <code>scheme_ps_targetpanels</code> but according to older versions
+of the REP. Most rows have a missing value, but rows <em>with</em> a value refer
+to a part of <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> from an older REP version that
+has been appended to the current version. Some of these rows may even
+concern spatial sampling units that are missing from the <a href='scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar.html'>current spatiotemporal samples</a>,
+for which selected field activity groups (FAGs) and occasions have been
+retained. The appended FAG occasions can only be applied in reality if the
+preceding FAG occasions on which they depend (not included) have already
+taken place, i.e. in the context of a previous release of the short-term
+fieldwork calendar.</p></dd>
+
 <dt><code>priority</code></dt><dd><p>Integer. A rank number representing the priority of the
 scheduled field activity group for the specified spatial sampling unit.</p></dd>
 
@@ -265,8 +277,8 @@ any of the other wait columns is <code>TRUE</code>.</p></dd>
 
 <dt><code>wait_watersurface</code></dt><dd><p>Logical. Should the scheduled field activity group
 in the specified spatial sampling unit be put on hold because the sampling
-unit is a watersurface? Watersurface types are defined using the regex
-<code>"^31|^2190_a"</code>.</p></dd>
+unit is a watersurface type? The value may also depend on the schemes in
+<code>schemes_served_all</code>.</p></dd>
 
 <dt><code>wait_3260</code></dt><dd><p>Logical. Should the scheduled field activity group in the
 specified spatial sampling unit be put on hold because the sampling unit
