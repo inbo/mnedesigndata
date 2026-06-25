@@ -30,23 +30,24 @@ edited (postponed) compared to \code{\link{fag_stratum_grts_calendar}}.
 \section{Fields}{
 
 \describe{
-\item{\code{scheme_ps_targetpanels}}{Factor. A concatenation of \code{"{scheme}:PS{panel set number}{targetpanel}"} strings, separated by \code{" | "} in case more than
-one targetpanel applies. It represents the different targetpanels (each
-belonging to a scheme and panel set) for which this field activity group in
-the specified spatial sampling unit needs to be done in the specified date
-interval as it cannot be delayed for the data collection in this
-targetpanel. For field activity group (FAG) occasions and spatial sampling
-units that do \emph{not} correspond to the current spatiotemporal samples (see
-\code{scheme_ps_oldtargetpanels}), the value of \code{scheme_ps_oldtargetpanels} is
-used instead. This is done to avoid missing values in derived objects or
-overviews.}
+\item{\code{scheme_ps_targetpanels_served}}{Factor. A concatenation of
+\code{"{scheme}:PS{panel set number}{targetpanel}"} strings, separated by \code{" | "} in case more than one targetpanel applies. It represents the different
+schemes (with the associated panel set and targetpanel of the sampling
+unit) that \emph{require} this field activity group in the specified spatial
+sampling unit to happen in the specified date interval as it cannot be
+delayed with regard to the data collection for these schemes. Compare with
+\code{schemes_served_all}. For field activity group (FAG) occasions and spatial
+sampling units that do \emph{not} correspond to the current spatiotemporal
+samples (see \code{scheme_ps_oldtargetpanels_served}), the value of
+\code{scheme_ps_oldtargetpanels_served} is used instead. This is done to avoid
+missing values in derived objects or overviews.}
 
 \item{\code{schemes_served_all}}{Factor. A concatenation of schemes, separated by
 \code{"|"}, that will make use of this scheduled field activity group (FAG) in
 the specified spatial sampling unit. It includes the schemes mentioned in
-\code{scheme_ps_targetpanels} but it can have more: in other schemes this FAG
-would have been scheduled at a later time, but they can and will use this
-FAG occasion instead.}
+\code{scheme_ps_targetpanels_served} but it can have more: in other schemes this
+FAG would have been scheduled at a later time, but they can and will use
+this FAG occasion instead.}
 
 \item{\code{nr_schemes_current}}{Integer. The number of schemes that have scheduled
 this field activity group in the specified spatial sampling unit in the
@@ -132,12 +133,12 @@ The date interval is missing for FAGs that match regex
 \code{"INST|LEVREAD|SPATPOSIT"}, as they don't require the same date interval
 order to be 'matching'.}
 
-\item{\code{scheme_ps_oldtargetpanels}}{Factor. A string formatted as and with a
-meaning similar to \code{scheme_ps_targetpanels} but according to older versions
-of the REP. Most rows have a missing value, but rows \emph{with} a value refer
-to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP version that
-has been appended to the current version. Some of these rows may even
-concern spatial sampling units that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
+\item{\code{scheme_ps_oldtargetpanels_served}}{Factor. A string formatted as and
+with a meaning similar to \code{scheme_ps_targetpanels_served} but according to
+older versions of the REP. Most rows have a missing value, but rows \emph{with}
+a value refer to a part of \code{\link{fag_stratum_grts_calendar}} from an older REP
+version that has been appended to the current version. Some of these rows
+may even concern spatial sampling units that are missing from the \link[=scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar]{current spatiotemporal samples},
 for which selected field activity groups (FAGs) and occasions have been
 retained. The appended FAG occasions can only be applied in reality if the
 preceding FAG occasions on which they depend (not included) have already
@@ -172,7 +173,8 @@ unit belongs to a floating (fen) type? Currently this is defined as type
 \item{\code{wait_mhq}}{Logical. Should the scheduled field activity group in the
 specified spatial sampling unit be put on hold because in the considered
 date interval (year) the field activity group is only needed for a MHQ
-scheme? (The latter is seen in the value of \code{scheme_ps_targetpanels}.)}
+scheme? (The latter is seen in the value of
+\code{scheme_ps_targetpanels_served}.)}
 
 \item{\code{wait_obsolete_types}}{Logical. Should the scheduled field activity group
 in the specified spatial sampling unit be put on hold because the type will
