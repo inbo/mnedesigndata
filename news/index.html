@@ -73,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9002</span>
       </span>
     </div>
 
@@ -122,7 +122,7 @@
 <ul>
 <li>Document columns in
 <code>fieldwork_shortterm_prioritization_by_stratum</code> (this needs
-the ‘code snippets’ since at least commit <code>89a3ffb</code>):
+the ‘code snippets’ since at least commit <code>60e19da</code>):
 <ul>
 <li>New column <code>matching_occasion</code>, to mark rows (FAG
 occasions) that actually represent a single FAG occasion in the field
@@ -130,6 +130,15 @@ but are linked to multiple strata. The data collection may be still be
 stratum-specific.</li>
 <li>Existing column <code>wait_watersurface</code>: its definition was
 modified.</li>
+<li>Column names <code>scheme_ps_targetpanels_served</code> and
+<code>scheme_ps_oldtargetpanels_served</code> replace previous names
+<code>scheme_ps_targetpanels</code> and
+<code>scheme_ps_oldtargetpanels</code>. These names are better related
+to the similar column name <code>schemes_served_all</code>; all of them
+refer to schemes that are ‘served’ by a FAG occasion. The renaming
+avoids confusion with the <code>scheme_ps_targetpanels</code> column in
+object <code>stratum_schemepstargetpanel_spsamples</code>, where it is a
+direct attribute of spatial sampling units.</li>
 </ul>
 </li>
 </ul>
