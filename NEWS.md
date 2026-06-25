@@ -1,9 +1,12 @@
 # mnedesigndata (development version)
 
-- Document columns in `fieldwork_shortterm_prioritization_by_stratum` (this needs the 'code snippets' since at least commit `89a3ffb`):
+- Document columns in `fieldwork_shortterm_prioritization_by_stratum` (this needs the 'code snippets' since at least commit `60e19da`):
   - New column `matching_occasion`, to mark rows (FAG occasions) that actually represent a single FAG occasion in the field but are linked to multiple strata.
   The data collection may be still be stratum-specific.
   - Existing column `wait_watersurface`: its definition was modified.
+  - Column names `scheme_ps_targetpanels_served` and `scheme_ps_oldtargetpanels_served` replace previous names `scheme_ps_targetpanels` and `scheme_ps_oldtargetpanels`.
+  These names are better related to the similar column name `schemes_served_all`; all of them refer to schemes that are 'served' by a FAG occasion.
+  The renaming avoids confusion with the `scheme_ps_targetpanels` column in object `stratum_schemepstargetpanel_spsamples`, where it is a direct attribute of spatial sampling units.
 
 # mnedesigndata 0.2.1 (2026-05-20)
 
