@@ -16,24 +16,25 @@
 #'
 #' @inherit modules format
 #'
-#' @field scheme_ps_targetpanels Factor. A concatenation of `"{scheme}:PS{panel
-#'   set number}{targetpanel}"` strings, separated by `" | "` in case more than
-#'   one targetpanel applies. It represents the different targetpanels (each
-#'   belonging to a scheme and panel set) for which this field activity group in
-#'   the specified spatial sampling unit needs to be done in the specified date
-#'   interval as it cannot be delayed for the data collection in this
-#'   targetpanel. For field activity group (FAG) occasions and spatial sampling
-#'   units that do _not_ correspond to the current spatiotemporal samples (see
-#'   `scheme_ps_oldtargetpanels`), the value of `scheme_ps_oldtargetpanels` is
-#'   used instead. This is done to avoid missing values in derived objects or
-#'   overviews.
+#' @field scheme_ps_targetpanels_served Factor. A concatenation of
+#'   `"{scheme}:PS{panel set number}{targetpanel}"` strings, separated by `" |
+#'   "` in case more than one targetpanel applies. It represents the different
+#'   schemes (with the associated panel set and targetpanel of the sampling
+#'   unit) that _require_ this field activity group in the specified spatial
+#'   sampling unit to happen in the specified date interval as it cannot be
+#'   delayed with regard to the data collection for these schemes. Compare with
+#'   `schemes_served_all`. For field activity group (FAG) occasions and spatial
+#'   sampling units that do _not_ correspond to the current spatiotemporal
+#'   samples (see `scheme_ps_oldtargetpanels_served`), the value of
+#'   `scheme_ps_oldtargetpanels_served` is used instead. This is done to avoid
+#'   missing values in derived objects or overviews.
 #'
 #' @field schemes_served_all Factor. A concatenation of schemes, separated by
 #'   `"|"`, that will make use of this scheduled field activity group (FAG) in
 #'   the specified spatial sampling unit. It includes the schemes mentioned in
-#'   `scheme_ps_targetpanels` but it can have more: in other schemes this FAG
-#'   would have been scheduled at a later time, but they can and will use this
-#'   FAG occasion instead.
+#'   `scheme_ps_targetpanels_served` but it can have more: in other schemes this
+#'   FAG would have been scheduled at a later time, but they can and will use
+#'   this FAG occasion instead.
 #'
 #' @field nr_schemes_current Integer. The number of schemes that have scheduled
 #'   this field activity group in the specified spatial sampling unit in the
@@ -116,15 +117,15 @@
 #'   may be still be stratum-specific. The value is composed as
 #'   `<field_activity_group>_<grts_address_final>_[<formatted date interval>]`.
 #'   The date interval is missing for FAGs that match regex
-#'   `"INST|LEVREAD|SPATPOSIT"`, as they don't require the same date interval to
-#'   be 'matching'.
+#'   `"INST|LEVREAD|SPATPOSIT"`, as they don't require the same date interval
+#'   order to be 'matching'.
 #'
-#' @field scheme_ps_oldtargetpanels Factor. A string formatted as and with a
-#'   meaning similar to `scheme_ps_targetpanels` but according to older versions
-#'   of the REP. Most rows have a missing value, but rows _with_ a value refer
-#'   to a part of [`fag_stratum_grts_calendar`] from an older REP version that
-#'   has been appended to the current version. Some of these rows may even
-#'   concern spatial sampling units that are missing from the [current
+#' @field scheme_ps_oldtargetpanels_served Factor. A string formatted as and
+#'   with a meaning similar to `scheme_ps_targetpanels_served` but according to
+#'   older versions of the REP. Most rows have a missing value, but rows _with_
+#'   a value refer to a part of [`fag_stratum_grts_calendar`] from an older REP
+#'   version that has been appended to the current version. Some of these rows
+#'   may even concern spatial sampling units that are missing from the [current
 #'   spatiotemporal
 #'   samples][scheme_moco_ps_spsubset_targetfag_stratum_sppost_spsamples_calendar],
 #'   for which selected field activity groups (FAGs) and occasions have been
@@ -161,7 +162,8 @@
 #' @field wait_mhq Logical. Should the scheduled field activity group in the
 #'   specified spatial sampling unit be put on hold because in the considered
 #'   date interval (year) the field activity group is only needed for a MHQ
-#'   scheme? (The latter is seen in the value of `scheme_ps_targetpanels`.)
+#'   scheme? (The latter is seen in the value of
+#'   `scheme_ps_targetpanels_served`.)
 #'
 #' @field wait_obsolete_types Logical. Should the scheduled field activity group
 #'   in the specified spatial sampling unit be put on hold because the type will
