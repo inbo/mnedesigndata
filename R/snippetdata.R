@@ -14,6 +14,21 @@
 #' The dates of early `"LOCEVAL"`-containing field activity groups may have been
 #' edited (postponed) compared to [`fag_stratum_grts_calendar`].
 #'
+#' The object typically focuses on a shorter time frame, e.g. one year, but it
+#' may also contain some future FAG occasions if in reality it is allowed to
+#' execute them earlier or if more preceding occasions can be added to them. An
+#' example (since tags `rep_0.14.0` and `fieldworgsnippets_0.12.0_poc_0.14.0`)
+#' is to include all _first_ FAG occasions per sampling unit that match
+#' `"INST|LEVREAD|SPATPOSIT"` in groundwater schemes: `INST` & `SPATPOSIT` then
+#' represent FAGs that can be executed earlier than planned, and the `LEVREAD`
+#' occasions can be used as a reference to add more preceding occasions.
+#'
+#' Beware that [`fag_stratum_grts_calendar`] may contain appended FAG occasions
+#' according to older  versions, i.e. from older REP versions, and that this is
+#' consequently present in `fieldwork_shortterm_prioritization_by_stratum`. See
+#' [`fag_stratum_grts_calendar`] for more information.
+#'
+#'
 #' @inherit modules format
 #'
 #' @field scheme_ps_targetpanels_served Factor. A concatenation of

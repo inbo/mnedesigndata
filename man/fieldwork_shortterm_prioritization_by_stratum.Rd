@@ -26,6 +26,20 @@ units.
 
 The dates of early \code{"LOCEVAL"}-containing field activity groups may have been
 edited (postponed) compared to \code{\link{fag_stratum_grts_calendar}}.
+
+The object typically focuses on a shorter time frame, e.g. one year, but it
+may also contain some future FAG occasions if in reality it is allowed to
+execute them earlier or if more preceding occasions can be added to them. An
+example (since tags \code{rep_0.14.0} and \code{fieldworgsnippets_0.12.0_poc_0.14.0})
+is to include all \emph{first} FAG occasions per sampling unit that match
+\code{"INST|LEVREAD|SPATPOSIT"} in groundwater schemes: \code{INST} & \code{SPATPOSIT} then
+represent FAGs that can be executed earlier than planned, and the \code{LEVREAD}
+occasions can be used as a reference to add more preceding occasions.
+
+Beware that \code{\link{fag_stratum_grts_calendar}} may contain appended FAG occasions
+according to older  versions, i.e. from older REP versions, and that this is
+consequently present in \code{fieldwork_shortterm_prioritization_by_stratum}. See
+\code{\link{fag_stratum_grts_calendar}} for more information.
 }
 \section{Fields}{
 
