@@ -1,4 +1,4 @@
-# mnedesigndata (development version)
+# mnedesigndata 0.2.2 (2026-07-02)
 
 _`rep_0.17.0` | `fieldworgsnippets_0.17.0_rep_0.17.0`_
 
