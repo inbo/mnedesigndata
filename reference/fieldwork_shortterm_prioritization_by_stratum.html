@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9002</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
       </span>
     </div>
 
@@ -149,6 +149,18 @@ are given because they drive subsampling locations in cell-based sampling
 units.</p>
 <p>The dates of early <code>"LOCEVAL"</code>-containing field activity groups may have been
 edited (postponed) compared to <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code>.</p>
+<p>The object typically focuses on a shorter time frame, e.g. one year, but it
+may also contain some future FAG occasions if in reality it is allowed to
+execute them earlier or if more preceding occasions can be added to them. An
+example (since tags <code>rep_0.14.0</code> and <code>fieldworgsnippets_0.12.0_poc_0.14.0</code>)
+is to include all <em>first</em> FAG occasions per sampling unit that match
+<code>"INST|LEVREAD|SPATPOSIT"</code> in groundwater schemes: <code>INST</code> &amp; <code>SPATPOSIT</code> then
+represent FAGs that can be executed earlier than planned, and the <code>LEVREAD</code>
+occasions can be used as a reference to add more preceding occasions.</p>
+<p>Beware that <code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> may contain appended FAG occasions
+according to older  versions, i.e. from older REP versions, and that this is
+consequently present in <code>fieldwork_shortterm_prioritization_by_stratum</code>. See
+<code><a href='fag_stratum_grts_calendar.html'>fag_stratum_grts_calendar</a></code> for more information.</p>
     <h2 class="hasAnchor" id="fields"><a class="anchor" href="#fields"></a>Fields</h2>
 
     
