@@ -1,5 +1,6 @@
 # mnedesigndata (development version)
 
+- Extend the 'Details' section of `fieldwork_shortterm_prioritization_by_stratum` with regard to occasions from old REP versions and occasions that go beyond the short-term window.
 - Document columns in `fieldwork_shortterm_prioritization_by_stratum` (this needs the 'code snippets' since at least commit `60e19da`):
   - New column `matching_occasion`, to mark rows (FAG occasions) that actually represent a single FAG occasion in the field but are linked to multiple strata.
   The data collection may be still be stratum-specific.
