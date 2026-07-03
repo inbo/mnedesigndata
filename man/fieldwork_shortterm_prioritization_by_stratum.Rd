@@ -24,8 +24,8 @@ The \code{is_forest}, \code{in_mhq_samples} and \code{last_type_assessment_in_fi
 are given because they drive subsampling locations in cell-based sampling
 units.
 
-The dates of early \code{"LOCEVAL"}-containing field activity groups may have been
-edited (postponed) compared to \code{\link{fag_stratum_grts_calendar}}.
+The dates of early FAG occasions that match \code{"LOCEVAL|SAMPLPOINT"} may have
+been edited (postponed) compared to \code{\link{fag_stratum_grts_calendar}}.
 
 The object typically focuses on a shorter time frame, e.g. one year, but it
 may also contain some future FAG occasions if in reality it is allowed to
@@ -34,7 +34,8 @@ example (since tags \code{rep_0.14.0} and \code{fieldworgsnippets_0.12.0_poc_0.1
 is to include all \emph{first} FAG occasions per sampling unit that match
 \code{"INST|LEVREAD|SPATPOSIT"} in groundwater schemes: \code{INST} & \code{SPATPOSIT} then
 represent FAGs that can be executed earlier than planned, and the \code{LEVREAD}
-occasions can be used as a reference to add more preceding occasions.
+occasions can be used as a reference to add more preceding occasions that
+comply with the revisit pattern of this FAG in a specific sampling unit.
 
 Beware that \code{\link{fag_stratum_grts_calendar}} may contain appended FAG occasions
 according to older  versions, i.e. from older REP versions, and that this is
