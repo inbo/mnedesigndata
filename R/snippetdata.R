@@ -11,8 +11,8 @@
 #' are given because they drive subsampling locations in cell-based sampling
 #' units.
 #'
-#' The dates of early `"LOCEVAL"`-containing field activity groups may have been
-#' edited (postponed) compared to [`fag_stratum_grts_calendar`].
+#' The dates of early FAG occasions that match `"LOCEVAL|SAMPLPOINT"` may have
+#' been edited (postponed) compared to [`fag_stratum_grts_calendar`].
 #'
 #' The object typically focuses on a shorter time frame, e.g. one year, but it
 #' may also contain some future FAG occasions if in reality it is allowed to
@@ -21,7 +21,8 @@
 #' is to include all _first_ FAG occasions per sampling unit that match
 #' `"INST|LEVREAD|SPATPOSIT"` in groundwater schemes: `INST` & `SPATPOSIT` then
 #' represent FAGs that can be executed earlier than planned, and the `LEVREAD`
-#' occasions can be used as a reference to add more preceding occasions.
+#' occasions can be used as a reference to add more preceding occasions that
+#' comply with the revisit pattern of this FAG in a specific sampling unit.
 #'
 #' Beware that [`fag_stratum_grts_calendar`] may contain appended FAG occasions
 #' according to older  versions, i.e. from older REP versions, and that this is
