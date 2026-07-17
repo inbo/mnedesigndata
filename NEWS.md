@@ -1,3 +1,9 @@
+# mnedesigndata (development version)
+
+_`rep_0.17.0` | `fieldworgsnippets_0.17.0_rep_0.17.0`_
+
+- `fieldwork_shortterm_prioritization_by_stratum`: minor improvements of the explanation about postponed FAGs and about prepending future FAG occasions.
+
 # mnedesigndata 0.2.2 (2026-07-02)
 
 _`rep_0.17.0` | `fieldworgsnippets_0.17.0_rep_0.17.0`_
