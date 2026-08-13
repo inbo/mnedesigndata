@@ -15,7 +15,7 @@
 #' @format Data frame.
 #'
 #' @source The REP (revisitplan) workflow. See
-#'   <https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan>.
+#'   <https://github.com/inbo/n2khab-mne-designs/tree/main/100_design_common/010_revisitplan>.
 #'
 #' @family defining REP objects
 #' @concept basic defining REP objects
