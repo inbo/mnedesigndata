@@ -1,4 +1,6 @@
-# mnedesigndata (development version)
+# mnedesigndata 0.3.0 (2026-08-14)
+
+_`rep_0.18.0` | `fieldworgsnippets_0.18.0_rep_0.18.0`_
 
 - Document new REP object `legacy_watersamplepoints_spslocs_lentic`.
 
