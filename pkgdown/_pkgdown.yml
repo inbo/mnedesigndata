@@ -32,3 +32,6 @@ reference:
   - title: "REP objects of the design outcome"
     contents:
     - has_concept("REP objects of the design outcome")
+  - title: "REP objects of design outcome applications"
+    contents:
+    - has_concept("REP objects of design outcome applications")
