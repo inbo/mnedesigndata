@@ -8,7 +8,7 @@ Data frame.
 }
 \source{
 The REP (revisitplan) workflow. See
-\url{https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan}.
+\url{https://github.com/inbo/n2khab-mne-designs/tree/main/100_design_common/010_revisitplan}.
 }
 \description{
 The data frame \code{domain_type_nunits} contains the spatial population size of each type

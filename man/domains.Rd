@@ -8,7 +8,7 @@ A simple feature collection of type MULTIPOLYGON.
 }
 \source{
 The REP (revisitplan) workflow. See
-\url{https://github.com/inbo/n2khab-mne-designs/tree/revisitplan/100_design_common/010_revisitplan}.
+\url{https://github.com/inbo/n2khab-mne-designs/tree/main/100_design_common/010_revisitplan}.
 }
 \description{
 The sf object \code{domains} defines code, names and geometry of each geospatial
