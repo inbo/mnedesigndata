@@ -1,5 +1,7 @@
 # mnedesigndata (development version)
 
+- `fieldwork_shortterm_prioritization_by_stratum`: minor documentation update for `matching_occasion`.
+
 # mnedesigndata 0.3.0 (2026-08-14)
 
 _`rep_0.18.0` | `fieldworgsnippets_0.18.0_rep_0.18.0`_
