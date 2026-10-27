@@ -79,7 +79,7 @@ columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mnedesigndata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -266,9 +266,8 @@ be a requirement, depending on the FAG. Matching FAG occasions effectively
 represent a single FAG occasion in the field, even though data collection
 may be still be stratum-specific. The value is composed as
 <code>&lt;field_activity_group&gt;_&lt;grts_address_final&gt;_[&lt;formatted date interval&gt;]</code>.
-The date interval is missing for FAGs that match regex
-<code>"INST|LEVREAD|SPATPOSIT"</code>, as they don't require the same date interval
-order to be 'matching'.</p></dd>
+The date interval is missing for FAGs that match regex <code>"INST|SPATPOSIT"</code>,
+as they don't require the same date interval order to be 'matching'.</p></dd>
 
 <dt><code>scheme_ps_oldtargetpanels_served</code></dt><dd><p>Factor. A string formatted as and
 with a meaning similar to <code>scheme_ps_targetpanels_served</code> but according to
