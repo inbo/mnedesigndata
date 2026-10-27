@@ -8,11 +8,11 @@ name: site-deploy
 
 jobs:
   site-deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: r-lib/actions/setup-pandoc@v2
 

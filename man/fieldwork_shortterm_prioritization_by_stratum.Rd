@@ -144,9 +144,8 @@ be a requirement, depending on the FAG. Matching FAG occasions effectively
 represent a single FAG occasion in the field, even though data collection
 may be still be stratum-specific. The value is composed as
 \verb{<field_activity_group>_<grts_address_final>_[<formatted date interval>]}.
-The date interval is missing for FAGs that match regex
-\code{"INST|LEVREAD|SPATPOSIT"}, as they don't require the same date interval
-order to be 'matching'.}
+The date interval is missing for FAGs that match regex \code{"INST|SPATPOSIT"},
+as they don't require the same date interval order to be 'matching'.}
 
 \item{\code{scheme_ps_oldtargetpanels_served}}{Factor. A string formatted as and
 with a meaning similar to \code{scheme_ps_targetpanels_served} but according to
